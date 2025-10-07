@@ -1,0 +1,160 @@
+name: mogroup_enterprise
+services:
+  backend:
+    build:
+      context: C:\MOGROUP_ROOT\MOGROUP_ENTERPRISE\backend
+      dockerfile: Dockerfile
+    container_name: mogroup_backend
+    depends_on:
+      database:
+        condition: service_healthy
+        required: true
+      redis:
+        condition: service_healthy
+        required: true
+    environment:
+      ADMIN_PASSWORD: admin20462108
+      ADMIN_USER: admin
+      ALLOWED_ORIGINS: http://127.0.0.1:3000,http://localhost:3000
+      DATABASE_URL: postgresql://mogroup_user:mogroup_secure_2024@database:5432/mogroup_enterprise
+      DEFAULT_RATE_LIMIT: 100 per minute
+      FLASK_ENV: development
+      GCS_BUCKET: mogroup-catalog-18717
+      GOOGLE_API_KEY: AIzaSyB-Tu1AY6PO62tIIHHkSF80YLXeWod165A
+      GOOGLE_APPLICATION_CREDENTIALS: /secrets/gcp-service-account.json
+      JWT_SECRET_KEY: jwt_mogroup_enterprise_secret_2008763248
+      NEXT_PUBLIC_API_BASE: http://127.0.0.1:5001
+      NEXT_PUBLIC_API_URL: http://127.0.0.1:5001/api/v1
+      REDIS_URL: redis://redis:6379/0
+      SECRET_KEY: mogroup_super_secret_key_1428582533
+      WHATSAPP_PHONE_ID: ""
+      WHATSAPP_TOKEN: ""
+    networks:
+      mogroup_network: null
+    ports:
+      - mode: ingress
+        target: 5001
+        published: "5001"
+        protocol: tcp
+    restart: always
+    volumes:
+      - type: bind
+        source: C:\MOGROUP_ROOT\MOGROUP_ENTERPRISE\backend
+        target: /app
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\MOGROUP_ROOT\MOGROUP_ENTERPRISE\secrets
+        target: /secrets
+        bind:
+          create_host_path: true
+  database:
+    container_name: mogroup_postgres
+    environment:
+      POSTGRES_DB: mogroup_enterprise
+      POSTGRES_PASSWORD: mogroup_secure_2024
+      POSTGRES_USER: mogroup_user
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - pg_isready -U mogroup_user -d mogroup_enterprise
+      timeout: 5s
+      interval: 10s
+      retries: 5
+    image: pgvector/pgvector:pg16
+    networks:
+      mogroup_network: null
+    ports:
+      - mode: ingress
+        target: 5432
+        published: "5432"
+        protocol: tcp
+    restart: always
+    volumes:
+      - type: volume
+        source: postgres_data
+        target: /var/lib/postgresql/data
+        volume: {}
+  frontend:
+    build:
+      context: C:\MOGROUP_ROOT\MOGROUP_ENTERPRISE\frontend
+      dockerfile: Dockerfile
+    command:
+      - npm
+      - run
+      - dev
+      - --
+      - -p
+      - "3000"
+    container_name: mogroup_frontend
+    depends_on:
+      backend:
+        condition: service_started
+        required: true
+    environment:
+      ADMIN_PASSWORD: admin20462108
+      ADMIN_USER: admin
+      ALLOWED_ORIGINS: http://127.0.0.1:3000,http://localhost:3000
+      DATABASE_URL: postgresql://mogroup_user:mogroup_secure_2024@database:5432/mogroup_enterprise
+      DEFAULT_RATE_LIMIT: 100 per minute
+      FLASK_ENV: development
+      GCS_BUCKET: mogroup-catalog-18717
+      GOOGLE_API_KEY: AIzaSyB-Tu1AY6PO62tIIHHkSF80YLXeWod165A
+      GOOGLE_APPLICATION_CREDENTIALS: /secrets/gcp-service-account.json
+      JWT_SECRET_KEY: jwt_mogroup_enterprise_secret_2008763248
+      NEXT_PUBLIC_API_BASE: http://127.0.0.1:5001
+      NEXT_PUBLIC_API_URL: http://127.0.0.1:5001/api/v1
+      NEXT_TELEMETRY_DISABLED: "1"
+      REDIS_URL: redis://redis:6379/0
+      SECRET_KEY: mogroup_super_secret_key_1428582533
+      WHATSAPP_PHONE_ID: ""
+      WHATSAPP_TOKEN: ""
+    networks:
+      mogroup_network: null
+    ports:
+      - mode: ingress
+        target: 3000
+        published: "3000"
+        protocol: tcp
+    restart: always
+    volumes:
+      - type: bind
+        source: C:\MOGROUP_ROOT\MOGROUP_ENTERPRISE\frontend
+        target: /app
+        bind:
+          create_host_path: true
+      - type: volume
+        source: node_modules_app
+        target: /app/node_modules
+        volume: {}
+      - type: volume
+        target: /app/.next
+        volume: {}
+  redis:
+    container_name: mogroup_redis
+    healthcheck:
+      test:
+        - CMD
+        - redis-cli
+        - ping
+      timeout: 5s
+      interval: 10s
+      retries: 5
+    image: redis:7-alpine
+    networks:
+      mogroup_network: null
+    ports:
+      - mode: ingress
+        target: 6379
+        published: "6379"
+        protocol: tcp
+    restart: always
+networks:
+  mogroup_network:
+    name: mogroup_enterprise_mogroup_network
+    driver: bridge
+volumes:
+  node_modules_app:
+    name: mogroup_enterprise_node_modules_app
+  postgres_data:
+    name: mogroup_enterprise_postgres_data

@@ -1,9 +1,7 @@
 'use client';
 import DataTable from '@/components/admin/DataTable';
 
-export default function 
-Pedidos
-Page() {
+export default function PedidosPage() {
   const columns = [
 'Nº Pedido','Cliente','Fecha','Estado'
 ];

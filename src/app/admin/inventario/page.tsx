@@ -1,9 +1,7 @@
 'use client';
 import DataTable from '@/components/admin/DataTable';
 
-export default function 
-Inventario
-Page() {
+export default function InventarioPage() {
   const columns = [
 'Producto','SKU','Stock','Precio'
 ];

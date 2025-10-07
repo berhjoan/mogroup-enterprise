@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mogroup.local/schemas/cotizacion.v1.json",
+  "title": "Cotizacion",
+  "type": "object",
+  "required": ["id","contacto","item","cantidad","estado","creada_en"],
+  "properties": {
+    "id": { "type":"string" },
+    "contacto": { "type":"string" },
+    "item": { "type":"string" },
+    "cantidad": { "type":"number","minimum":1 },
+    "comentario": { "type":"string" },
+    "estado": { "type":"string" },
+    "creada_en": { "type":"string", "format":"date-time" }
+  },
+  "additionalProperties": false
+}

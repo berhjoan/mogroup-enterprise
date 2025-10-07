@@ -1,0 +1,9 @@
+{
+  "id": "string",
+  "producto_id": "string",
+  "proveedor_id": "string",
+  "moneda": "PAB",
+  "precio_unitario": 0.0,
+  "vigente_desde": "2025-09-23T00:00:00Z",
+  "vigente_hasta": null
+}

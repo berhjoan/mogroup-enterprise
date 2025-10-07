@@ -1,9 +1,7 @@
 'use client';
 import DataTable from '@/components/admin/DataTable';
 
-export default function 
-Cotizaciones
-Page() {
+export default function CotizacionesPage() {
   const columns = [
 'Cliente','Fecha','Total','Estado'
 ];

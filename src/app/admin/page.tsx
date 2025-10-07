@@ -1,120 +1,218 @@
-'use client';
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
-import Link from 'next/link';
+'use client'
 
-export default function AdminPage() {
-  const [credentials, setCredentials] = useState({ email: '', password: '' });
-  const [isLoading, setIsLoading] = useState(false);
-  const router = useRouter();
+import Link from 'next/link'
+import { LayoutDashboard, Users, Package, Truck, FileText, DollarSign, BarChart3, Settings } from 'lucide-react'
 
-  const handleLogin = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-    // TODO: Implementar autenticación real
-    setTimeout(() => {
-      if (credentials.email && credentials.password) {
-        router.push('/admin/dashboard');
-      }
-      setIsLoading(false);
-    }, 800);
-  };
+export default function AdminDashboard() {
+  const modulos = [
+    {
+      titulo: 'Proveedores',
+      descripcion: '22 proveedores certificados',
+      icono: <Package className="w-12 h-12" />,
+      ruta: '/admin/proveedores',
+      color: 'from-blue-500 to-blue-600',
+      stats: '22 activos'
+    },
+    {
+      titulo: 'Clientes',
+      descripcion: 'Gestión de clientes B2B',
+      icono: <Users className="w-12 h-12" />,
+      ruta: '/admin/clientes',
+      color: 'from-green-500 to-green-600',
+      stats: '3 clientes'
+    },
+    {
+      titulo: 'Inventario',
+      descripcion: 'Control de productos',
+      icono: <BarChart3 className="w-12 h-12" />,
+      ruta: '/admin/inventario',
+      color: 'from-purple-500 to-purple-600',
+      stats: 'Próximamente'
+    },
+    {
+      titulo: 'Cotizaciones',
+      descripcion: 'Solicitudes de clientes',
+      icono: <FileText className="w-12 h-12" />,
+      ruta: '/admin/cotizaciones',
+      color: 'from-yellow-500 to-yellow-600',
+      stats: 'Próximamente'
+    },
+    {
+      titulo: 'Transporte',
+      descripcion: 'Logística y rutas',
+      icono: <Truck className="w-12 h-12" />,
+      ruta: '/admin/transporte',
+      color: 'from-red-500 to-red-600',
+      stats: 'Próximamente'
+    },
+    {
+      titulo: 'Contabilidad',
+      descripcion: 'Facturación y pagos',
+      icono: <DollarSign className="w-12 h-12" />,
+      ruta: '/admin/contabilidad',
+      color: 'from-indigo-500 to-indigo-600',
+      stats: 'Próximamente'
+    },
+    {
+      titulo: 'Pedidos',
+      descripcion: 'Gestión de órdenes',
+      icono: <FileText className="w-12 h-12" />,
+      ruta: '/admin/pedidos',
+      color: 'from-pink-500 to-pink-600',
+      stats: 'Próximamente'
+    },
+    {
+      titulo: 'Configuración',
+      descripcion: 'Ajustes del sistema',
+      icono: <Settings className="w-12 h-12" />,
+      ruta: '/admin/configuracion',
+      color: 'from-gray-500 to-gray-600',
+      stats: 'Sistema'
+    }
+  ]
 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-mogroup-blue via-blue-900 to-mogroup-accent flex items-center justify-center px-4 relative overflow-hidden'>
-      {/* Patrón de fondo decorativo */}
-      <div className='absolute inset-0 opacity-10'>
-        <div className='absolute top-20 left-20 w-64 h-64 bg-white rounded-full blur-3xl' />
-        <div className='absolute bottom-20 right-20 w-96 h-96 bg-mogroup-accent rounded-full blur-3xl' />
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+      {/* Header */}
+      <div className="bg-gradient-to-r from-blue-700 via-blue-800 to-indigo-900 text-white shadow-2xl">
+        <div className="max-w-7xl mx-auto px-6 py-8">
+          <div className="flex items-center gap-4 mb-4">
+            <LayoutDashboard className="w-12 h-12" />
+            <div>
+              <h1 className="text-5xl font-bold">MOGROUP-ENTERPRISE OS</h1>
+              <p className="text-blue-100 text-xl">Sistema de Gestión Integral | CRM/ERP Avanzado</p>
+            </div>
+          </div>
+          <div className="bg-white/20 rounded-xl p-4 backdrop-blur">
+            <p className="text-lg">
+              <span className="font-bold">Sesión Activa:</span> BKSYSTEM (Administrador) | 
+              <span className="ml-4 font-bold">Hora:</span> {new Date().toLocaleString('es-PA')}
+            </p>
+          </div>
+        </div>
       </div>
 
-      {/* Card de Login */}
-      <div className='relative bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md'>
-        {/* Header */}
-        <div className='text-center mb-8'>
-          <div className='flex justify-center mb-4'>
-            <div className='w-16 h-16 bg-gradient-to-br from-mogroup-blue to-mogroup-accent rounded-2xl flex items-center justify-center shadow-lg'>
-              <svg className='w-10 h-10 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z' />
-              </svg>
+      {/* Dashboard Content */}
+      <div className="max-w-7xl mx-auto px-6 py-8">
+        {/* Métricas Principales */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+          <div className="bg-white rounded-2xl shadow-lg p-6">
+            <div className="flex items-center justify-between mb-3">
+              <div>
+                <p className="text-gray-600 text-sm font-medium">Proveedores</p>
+                <p className="text-4xl font-bold text-blue-600">22</p>
+              </div>
+              <Package className="w-12 h-12 text-blue-500" />
             </div>
+            <p className="text-green-600 text-sm">✓ Todos activos</p>
           </div>
-          <h1 className='text-3xl font-bold text-mogroup-blue mb-2'>MOGROUP-ENTERPRISE OS</h1>
-          <p className='text-gray-600'>Sistema de Gestión Administrativa</p>
+
+          <div className="bg-white rounded-2xl shadow-lg p-6">
+            <div className="flex items-center justify-between mb-3">
+              <div>
+                <p className="text-gray-600 text-sm font-medium">Clientes</p>
+                <p className="text-4xl font-bold text-green-600">3</p>
+              </div>
+              <Users className="w-12 h-12 text-green-500" />
+            </div>
+            <p className="text-green-600 text-sm">✓ Henry activo</p>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-lg p-6">
+            <div className="flex items-center justify-between mb-3">
+              <div>
+                <p className="text-gray-600 text-sm font-medium">Productos</p>
+                <p className="text-4xl font-bold text-purple-600">559</p>
+              </div>
+              <BarChart3 className="w-12 h-12 text-purple-500" />
+            </div>
+            <p className="text-purple-600 text-sm">En catálogo</p>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-lg p-6">
+            <div className="flex items-center justify-between mb-3">
+              <div>
+                <p className="text-gray-600 text-sm font-medium">Sistema</p>
+                <p className="text-4xl font-bold text-green-600">100%</p>
+              </div>
+              <LayoutDashboard className="w-12 h-12 text-green-500" />
+            </div>
+            <p className="text-green-600 text-sm">Operativo</p>
+          </div>
         </div>
 
-        {/* Formulario */}
-        <form onSubmit={handleLogin} className='space-y-4'>
-          <div>
-            <label className='block text-sm font-medium text-gray-700 mb-2'>Email Corporativo</label>
-            <div className='relative'>
-              <div className='absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none'>
-                <svg className='w-5 h-5 text-gray-400' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z' />
-                </svg>
-              </div>
-              <input
-                type='email'
-                value={credentials.email}
-                onChange={(e) => setCredentials({...credentials, email: e.target.value})}
-                className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-mogroup-accent focus:border-transparent transition-all'
-                placeholder='admin@mogroup.com'
-                required
-              />
-            </div>
+        {/* Módulos del Sistema */}
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold text-gray-800 mb-6">Módulos del Sistema</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {modulos.map((modulo, idx) => (
+              <Link
+                key={idx}
+                href={modulo.ruta}
+                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2"
+              >
+                <div className={`bg-gradient-to-r ${modulo.color} p-6 text-white`}>
+                  <div className="flex justify-center mb-3">
+                    {modulo.icono}
+                  </div>
+                  <h3 className="text-xl font-bold text-center">{modulo.titulo}</h3>
+                </div>
+                <div className="p-6">
+                  <p className="text-gray-600 text-center mb-3">{modulo.descripcion}</p>
+                  <div className="bg-gray-100 rounded-lg p-2 text-center">
+                    <span className="text-sm font-semibold text-gray-700">{modulo.stats}</span>
+                  </div>
+                </div>
+              </Link>
+            ))}
           </div>
+        </div>
 
-          <div>
-            <label className='block text-sm font-medium text-gray-700 mb-2'>Contraseña</label>
-            <div className='relative'>
-              <div className='absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none'>
-                <svg className='w-5 h-5 text-gray-400' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z' />
-                </svg>
+        {/* Accesos Rápidos */}
+        <div className="bg-white rounded-2xl shadow-lg p-6">
+          <h3 className="text-2xl font-bold text-gray-800 mb-4">Accesos Rápidos</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <Link
+              href="/admin/proveedores"
+              className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 rounded-xl hover:from-blue-100 hover:to-blue-200 transition-colors"
+            >
+              <div className="flex items-center gap-3">
+                <Package className="w-8 h-8 text-blue-600" />
+                <div>
+                  <p className="font-bold text-gray-800">Ver Proveedores</p>
+                  <p className="text-sm text-gray-600">22 proveedores disponibles</p>
+                </div>
               </div>
-              <input
-                type='password'
-                value={credentials.password}
-                onChange={(e) => setCredentials({...credentials, password: e.target.value})}
-                className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-mogroup-accent focus:border-transparent transition-all'
-                placeholder='••••••••'
-                required
-              />
-            </div>
+            </Link>
+
+            <Link
+              href="/admin/clientes"
+              className="bg-gradient-to-r from-green-50 to-green-100 p-4 rounded-xl hover:from-green-100 hover:to-green-200 transition-colors"
+            >
+              <div className="flex items-center gap-3">
+                <Users className="w-8 h-8 text-green-600" />
+                <div>
+                  <p className="font-bold text-gray-800">Ver Clientes</p>
+                  <p className="text-sm text-gray-600">Gestionar clientes B2B</p>
+                </div>
+              </div>
+            </Link>
+
+            <Link
+              href="/catalogo"
+              className="bg-gradient-to-r from-purple-50 to-purple-100 p-4 rounded-xl hover:from-purple-100 hover:to-purple-200 transition-colors"
+            >
+              <div className="flex items-center gap-3">
+                <BarChart3 className="w-8 h-8 text-purple-600" />
+                <div>
+                  <p className="font-bold text-gray-800">Catálogo Henry</p>
+                  <p className="text-sm text-gray-600">559 productos organizados</p>
+                </div>
+              </div>
+            </Link>
           </div>
-
-          <button
-            type='submit'
-            disabled={isLoading}
-            className={'w-full py-3 font-semibold rounded-lg transition-all duration-300 ' + (isLoading ? 'bg-gray-400 cursor-not-allowed' : 'bg-gradient-to-r from-mogroup-blue to-mogroup-accent text-white hover:shadow-xl hover:scale-105')}
-          >
-            {isLoading ? (
-              <span className='flex items-center justify-center gap-2'>
-                <svg className='animate-spin h-5 w-5' fill='none' viewBox='0 0 24 24'>
-                  <circle className='opacity-25' cx='12' cy='12' r='10' stroke='currentColor' strokeWidth='4' />
-                  <path className='opacity-75' fill='currentColor' d='M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z' />
-                </svg>
-                Verificando...
-              </span>
-            ) : (
-              'Iniciar Sesión'
-            )}
-          </button>
-        </form>
-
-        {/* Footer del Card */}
-        <div className='mt-6 pt-6 border-t border-gray-200'>
-          <p className='text-center text-sm text-gray-500 mb-3'>
-            Sistema protegido - Acceso solo para personal autorizado
-          </p>
-          <Link href='/' className='flex items-center justify-center gap-2 text-sm text-mogroup-blue hover:text-mogroup-accent transition-colors'>
-            <svg className='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-              <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M10 19l-7-7m0 0l7-7m-7 7h18' />
-            </svg>
-            Volver al sitio público
-          </Link>
         </div>
       </div>
     </div>
-  );
+  )
 }

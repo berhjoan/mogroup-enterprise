@@ -1,9 +1,7 @@
 'use client';
 import DataTable from '@/components/admin/DataTable';
 
-export default function 
-Reportes
-Page() {
+export default function ReportesPage() {
   const columns = [
 'Tipo','Período','Generado','Acción'
 ];

@@ -1,0 +1,71 @@
+{
+  "Producto": {
+    "id": "prod_123",
+    "sku_interno": "MG-SKU-001",
+    "nombre_normalizado": "Tornillo de Acero Inoxidable 1/4\"",
+    "descripcion": "Tornillo de alta resistencia para construcción, cabeza hexagonal.",
+    "marca_display": "MOGroup",
+    "categoria_id": "cat_01",
+    "subcategoria_id": "sub_01_01",
+    "atributos": {
+      "material": "Acero Inoxidable 304",
+      "longitud": "50mm",
+      "diametro": "1/4 inch"
+    },
+    "unidad_medida": "caja_100_unidades",
+    "imagen_url": "/products/mg-sku-001.jpg",
+    "activo": true,
+    "fecha_creacion": "2025-09-22T14:00:00Z"
+  },
+  "Proveedor": {
+    "id": "prov_abc",
+    "razon_social": "Ferretería Industrial XYZ S.A. de C.V.",
+    "rfc": "FIXYZ850101ABC",
+    "contacto_principal": {
+      "nombre": "Juan Pérez",
+      "email": "juan.perez@example.com",
+      "telefono_whatsapp": "+525512345678"
+    },
+    "direccion_fiscal": "Calle Falsa 123, Colonia Centro, Ciudad de México",
+    "onboarding_completo": true,
+    "activo": true,
+    "fecha_registro": "2025-09-20T10:00:00Z"
+  },
+  "ListaPrecio": {
+    "id": "lp_xyz_001_v1",
+    "proveedor_id": "prov_abc",
+    "sku_proveedor": "TOR-AI-1/4-50",
+    "producto_id_interno": "prod_123",
+    "precio_unitario": 150.75,
+    "moneda": "MXN",
+    "fecha_inicio_vigencia": "2025-09-01T00:00:00Z",
+    "fecha_fin_vigencia": null,
+    "version": 1,
+    "activo": true
+  },
+  "Cotizacion": {
+    "id": "cot_789",
+    "cliente_id": "cli_def",
+    "estatus": "generada",
+    "items": [
+      {
+        "producto_id": "prod_123",
+        "cantidad": 10
+      }
+    ],
+    "opciones_propuestas": [
+      {
+        "opcion_id": "opt_01",
+        "proveedor_id": "prov_abc",
+        "costo_total": 1507.50,
+        "margen_estimado_pct": 20.0,
+        "precio_venta_final": 1884.38,
+        "sla_entrega_horas": 48,
+        "validez_hasta": "2025-09-24T14:00:00Z",
+        "seleccionada": false
+      }
+    ],
+    "fecha_solicitud": "2025-09-22T13:00:00Z",
+    "fecha_propuesta": "2025-09-22T13:15:00Z"
+  }
+}

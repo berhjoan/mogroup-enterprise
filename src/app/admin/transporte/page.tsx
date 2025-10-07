@@ -1,9 +1,7 @@
 'use client';
 import DataTable from '@/components/admin/DataTable';
 
-export default function 
-Transporte
-Page() {
+export default function TransportePage() {
   const columns = [
 'Ruta','Vehículo','Chofer','Estado'
 ];

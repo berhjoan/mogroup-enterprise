@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --brand:#0D6EFD; --dark:#0b1220; }
+html,body { background:#fff; color:#1f2937; }
+a.btn { padding:10px 16px; background:var(--brand); color:#fff; border-radius:8px; text-decoration:none; }

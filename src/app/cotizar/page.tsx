@@ -1,40 +1,81 @@
-'use client';
-import { useSearchParams } from 'next/navigation';
-import { useState } from 'react';
+'use client'
+
+import { Suspense } from 'react'
+import { useSearchParams } from 'next/navigation'
+
+function CotizarContent() {
+  const searchParams = useSearchParams()
+  
+  return (
+    <div className="min-h-screen bg-gray-50 py-8">
+      <div className="max-w-4xl mx-auto px-4">
+        <h1 className="text-3xl font-bold text-gray-900 mb-8">
+          Solicitar Cotización
+        </h1>
+        
+        <div className="bg-white rounded-lg shadow-md p-6">
+          <form className="space-y-6">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Empresa
+              </label>
+              <input
+                type="text"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Nombre de su empresa"
+              />
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Contacto
+              </label>
+              <input
+                type="text"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Nombre del contacto"
+              />
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Email
+              </label>
+              <input
+                type="email"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="email@empresa.com"
+              />
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Descripción de productos necesarios
+              </label>
+              <textarea
+                rows={4}
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Describa los productos o servicios que necesita..."
+              />
+            </div>
+            
+            <button
+              type="submit"
+              className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              Enviar Solicitud de Cotización
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 export default function CotizarPage() {
-  const sp = useSearchParams();
-  const item = sp.get('item') || '';
-  const [state, setState] = useState<'idle'|'sending'|'ok'|'err'>('idle');
-
-  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    const fd = new FormData(e.currentTarget);
-    setState('sending');
-    const res = await fetch('/api/quotes', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(Object.fromEntries(fd as any))
-    });
-    setState(res.ok ? 'ok' : 'err');
-  }
-
   return (
-    <main>
-      <h1 className='text-2xl font-semibold mb-4'>Solicitar cotización</h1>
-      <form onSubmit={onSubmit} className='space-y-3 max-w-xl'>
-        <input name='producto' defaultValue={item} placeholder='Producto o categoría' className='border p-2 w-full' />
-        <input name='empresa' placeholder='Empresa' className='border p-2 w-full' required />
-        <input name='contacto' placeholder='Nombre de contacto' className='border p-2 w-full' required />
-        <input name='email' type='email' placeholder='Email' className='border p-2 w-full' required />
-        <input name='telefono' placeholder='Teléfono' className='border p-2 w-full' />
-        <textarea name='detalle' placeholder='Detalle de requerimiento' className='border p-2 w-full' rows={4} />
-        <button className='px-4 py-2 bg-mogroup-blue text-white rounded' disabled={state==='sending'}>
-          {state==='sending' ? 'Enviando...' : 'Enviar solicitud'}
-        </button>
-        {state==='ok' && <p className='text-green-700'>Solicitud enviada. Nuestro equipo te contactará.</p>}
-        {state==='err' && <p className='text-red-700'>Error al enviar. Intenta nuevamente.</p>}
-      </form>
-    </main>
-  );
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Cargando...</div>}>
+      <CotizarContent />
+    </Suspense>
+  )
 }

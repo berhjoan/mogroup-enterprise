@@ -1,0 +1,40 @@
+import os, click
+from flask import Flask, jsonify
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
+from flask_cors import CORS
+
+db = SQLAlchemy()
+migrate = Migrate()
+
+def create_app():
+    app = Flask(__name__)
+    app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv(
+        "DATABASE_URL",
+        "postgresql://mogroup_user:mogroup_secure_2024@database:5432/mogroup_enterprise"
+    )
+    app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+    CORS(app, resources={r"/*": {"origins": "*"}})
+
+    db.init_app(app)
+    migrate.init_app(app, db)
+
+    @app.route("/health")
+    def health():
+        return jsonify(status="ok", message="Servidor MOGROUP en línea.")
+
+    # Registro de blueprints si existen
+    try:
+        from .ai.routes import ai_bp
+        app.register_blueprint(ai_bp)
+    except Exception:
+        pass
+    try:
+        from .files.routes import files_bp
+        app.register_blueprint(files_bp)
+    except Exception:
+        pass
+
+    return app
+
+app = create_app()

@@ -1,0 +1,22 @@
+{
+  "event_id": "uuid",
+  "timestamp": "ISO-8601",
+  "origen": "frontend|backend|worker|ia",
+  "modulo": "catalogo|cotizaciones|compras|logistica|facturacion|crm|integraciones",
+  "accion": "string",
+  "referencias": {
+    "cotizacion_id": "string",
+    "cliente_id": "string",
+    "proveedor_id": "string",
+    "producto_id": "string"
+  },
+  "decision": {
+    "reglas_aplicadas": ["string"],
+    "costo": 0.0,
+    "margen_estimado": 0.0,
+    "sla_horas": 48,
+    "explicacion": "string"
+  },
+  "consentimiento": { "requerido": true, "consent_id": "string|null" },
+  "integridad": { "hash_prev": "string|null", "hash_actual": "string" }
+}

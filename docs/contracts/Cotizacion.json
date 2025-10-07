@@ -1,0 +1,11 @@
+{
+  "id": "string",
+  "cliente": { "nombre": "string", "ruc": "string", "email": "string" },
+  "items": [{ "sku": "string", "cantidad": 1, "unidad": "string", "nota": "string" }],
+  "total_neto": 0.0,
+  "itbms": 0.0,
+  "total_bruto": 0.0,
+  "estado": "Borrador",
+  "pdf_hash": "string",
+  "creada_en": "2025-09-23T00:00:00Z"
+}

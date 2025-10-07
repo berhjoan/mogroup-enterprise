@@ -1,23 +1,13 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { query } from '@/lib/db/postgres';
+import { NextRequest, NextResponse } from 'next/server'
 
-export const runtime = 'nodejs';
-
-export async function GET(req: NextRequest) {
+export async function GET(request: NextRequest) {
   try {
-    const categoriaId = req.nextUrl.searchParams.get('categoria_id');
-    let sql = 'SELECT * FROM subcategorias';
-    const params: any[] = [];
-    
-    if (categoriaId) {
-      sql += ' WHERE categoria_id = $1';
-      params.push(categoriaId);
-    }
-    
-    sql += ' ORDER BY nombre';
-    const result = await query(sql, params);
-    return NextResponse.json({ subcategorias: result.rows }, { status: 200 });
-  } catch (error: any) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    const subcategorias = [
+      { id: 1, nombre: "Subcategoría Demo 1", categoria_id: 1 },
+      { id: 2, nombre: "Subcategoría Demo 2", categoria_id: 1 }
+    ]
+    return NextResponse.json({ subcategorias })
+  } catch (error) {
+    return NextResponse.json({ error: 'Error interno del servidor' }, { status: 500 })
   }
 }

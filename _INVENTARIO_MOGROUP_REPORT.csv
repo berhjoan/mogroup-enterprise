@@ -1,0 +1,19 @@
+Tipo,SubCarpeta,Archivo,Extension,Tamaño(Bytes),ÚltimaModificación,Clasificación
+config,MOGROUP_ENTERPRISE,".env",env,1234,09/22/2025 13:48:15,config
+docker,MOGROUP_ENTERPRISE,"docker-compose.yml",yml,1937,09/22/2025 13:48:15,docker
+docker,backend,"Dockerfile",,513,09/22/2025 14:02:01,docker
+docs,backend,"requirements.txt",txt,126,09/22/2025 14:01:47,docs
+data,backend,"run.py",py,120,09/22/2025 14:01:18,otro
+data,app,"__init__.py",py,1100,09/22/2025 14:01:33,otro
+backend,models,"__init__.py",py,291,09/22/2025 14:00:49,backend
+backend,models,"price_list.py",py,1771,09/22/2025 14:00:03,backend
+backend,models,"product.py",py,1655,09/22/2025 13:58:50,backend
+backend,models,"provider.py",py,1286,09/22/2025 13:59:19,backend
+backend,models,"quote.py",py,1418,09/22/2025 14:00:35,backend
+data,__pycache__,"__init__.cpython-39.pyc",pyc,947,09/22/2025 14:03:50,otro
+data,__pycache__,"run.cpython-39.pyc",pyc,227,09/22/2025 14:03:50,otro
+config,config,"kat_config.json",json,1255,09/22/2025 13:48:15,config
+data,docs,"data_contracts.json",json,2101,09/22/2025 13:58:33,data
+docker,frontend,"Dockerfile",,245,09/22/2025 14:02:55,docker
+frontend,frontend,"next.config.js",js,166,09/22/2025 13:37:22,frontend
+data,frontend,"package-lock.json",json,87,09/22/2025 13:37:25,data

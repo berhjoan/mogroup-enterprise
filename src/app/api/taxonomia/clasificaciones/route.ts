@@ -1,11 +1,13 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { query } from '@/lib/db/postgres';
+import { NextRequest, NextResponse } from 'next/server'
 
-export async function GET() {
+export async function GET(request: NextRequest) {
   try {
-    const result = await query('SELECT * FROM clasificaciones ORDER BY nombre');
-    return NextResponse.json({ clasificaciones: result.rows }, { status: 200 });
-  } catch (error: any) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    const clasificaciones = [
+      { id: 1, nombre: "Clasificación Demo 1" },
+      { id: 2, nombre: "Clasificación Demo 2" }
+    ]
+    return NextResponse.json({ clasificaciones })
+  } catch (error) {
+    return NextResponse.json({ error: 'Error interno del servidor' }, { status: 500 })
   }
 }

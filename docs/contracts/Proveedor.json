@@ -1,0 +1,8 @@
+{
+  "id": "string",
+  "nombre": "string",
+  "ruc": "string",
+  "contacto": { "email": "string", "telefono": "string" },
+  "estado": "Activo",
+  "sla_horas": 48
+}

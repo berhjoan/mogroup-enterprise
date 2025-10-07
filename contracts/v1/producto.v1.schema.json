@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mogroup.local/schemas/producto.v1.json",
+  "title": "Producto",
+  "type": "object",
+  "required": ["id","sku","nombre","categoria","marca","atributos","activo"],
+  "properties": {
+    "id": { "type":"string" },
+    "sku": { "type":"string" },
+    "nombre": { "type":"string" },
+    "categoria": { "type":"string" },
+    "marca": { "type":"string" },
+    "descripcion": { "type":"string" },
+    "imagen_url": { "type":"string", "format":"uri" },
+    "atributos": { "type":"object", "additionalProperties": { "type":["string","number","boolean"] } },
+    "activo": { "type":"boolean" },
+    "proveedor_interno_id": { "type":"string" }
+  },
+  "additionalProperties": false
+}

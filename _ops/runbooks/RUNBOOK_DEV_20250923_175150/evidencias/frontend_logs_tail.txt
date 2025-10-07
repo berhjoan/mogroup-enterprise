@@ -1,0 +1,36 @@
+mogroup_frontend  | 
+mogroup_frontend  | > mogroup-frontend@0.1.0 dev
+mogroup_frontend  | > next dev -p 3000 -p 3000
+mogroup_frontend  | 
+mogroup_frontend  |   Ôû▓ Next.js 14.2.33
+mogroup_frontend  |   - Local:        http://localhost:3000
+mogroup_frontend  |   - Environments: .env.local
+mogroup_frontend  | 
+mogroup_frontend  |  Ô£ô Starting...
+mogroup_frontend  |  Ô£ô Ready in 2.3s
+mogroup_frontend  |  Ôùï Compiling / ...
+mogroup_frontend  |  Ô£ô Compiled / in 5.5s (464 modules)
+mogroup_frontend  |  GET / 200 in 3140ms
+mogroup_frontend  |  Ô£ô Compiled in 604ms (238 modules)
+mogroup_frontend  |  Ô£ô Compiled in 125ms (224 modules)
+mogroup_frontend  |  GET / 200 in 278ms
+mogroup_frontend  |  Ôùï Compiling /enterprise ...
+mogroup_frontend  |  Ô£ô Compiled /enterprise in 5.7s (452 modules)
+mogroup_frontend  |  GET /enterprise 200 in 2021ms
+mogroup_frontend  |  Ô£ô Compiled /enterprise/catalogo in 384ms (454 modules)
+mogroup_frontend  |  GET /enterprise/catalogo 200 in 625ms
+mogroup_frontend  |  Ô£ô Compiled /catalogo in 467ms (460 modules)
+mogroup_frontend  |  GET /catalogo 200 in 681ms
+mogroup_frontend  |  Ô£ô Compiled /servicios/insumos in 500ms (462 modules)
+mogroup_frontend  |  GET /servicios/insumos 200 in 738ms
+mogroup_frontend  | [?25h
+mogroup_frontend  | 
+mogroup_frontend  | > mogroup-frontend@0.1.0 dev
+mogroup_frontend  | > next dev -p 3000 -p 3000
+mogroup_frontend  | 
+mogroup_frontend  |   Ôû▓ Next.js 14.2.33
+mogroup_frontend  |   - Local:        http://localhost:3000
+mogroup_frontend  |   - Environments: .env.local
+mogroup_frontend  | 
+mogroup_frontend  |  Ô£ô Starting...
+mogroup_frontend  |  Ô£ô Ready in 2.5s

@@ -1,0 +1,65 @@
+services:
+  database:
+    image: pgvector/pgvector:pg16
+    container_name: mogroup_postgres
+    restart: always
+    environment:
+      POSTGRES_DB: mogroup_enterprise
+      POSTGRES_USER: mogroup_user
+      POSTGRES_PASSWORD: mogroup_secure_2024
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports: ["5432:5432"]
+    networks: [mogroup_network]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mogroup_user -d mogroup_enterprise"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+  redis:
+    image: redis:7-alpine
+    container_name: mogroup_redis
+    restart: always
+    ports: ["6379:6379"]
+    networks: [mogroup_network]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: mogroup_backend
+    restart: always
+    env_file: ./.env
+    volumes:
+      - ./backend:/app
+      - ./secrets:/secrets
+    ports: ["5001:5001"]
+    depends_on:
+      database: { condition: service_healthy }
+      redis: { condition: service_healthy }
+    networks: [mogroup_network]
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: mogroup_frontend
+    restart: always
+    env_file: ./.env
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+      - /app/.next
+    ports: ["3000:3000"]
+    depends_on: [backend]
+    networks: [mogroup_network]
+volumes:
+  postgres_data:
+  redis_data:
+networks:
+  mogroup_network:
+    driver: bridge
+

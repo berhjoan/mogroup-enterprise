@@ -1,0 +1,7 @@
+commit 230b7fe2cd8e5773b769d1d75562fd51f2a80b15
+Author:     Tu Nombre <tu.email@ejemplo.com>
+AuthorDate: Tue Sep 23 16:37:43 2025 -0500
+Commit:     Tu Nombre <tu.email@ejemplo.com>
+CommitDate: Tue Sep 23 16:37:43 2025 -0500
+
+    chore(frontend): upgrade Next to 14.2.33 + recreate service and validate

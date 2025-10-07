@@ -1,0 +1,14 @@
+v20.19.5
+10.8.2
+mogroup-frontend@0.1.0 /app
+Ôö£ÔöÇÔöÇ @types/node@24.5.2
+Ôö£ÔöÇÔöÇ @types/react@19.1.13
+Ôö£ÔöÇÔöÇ autoprefixer@10.4.21
+Ôö£ÔöÇÔöÇ eslint-config-next@14.2.4
+Ôö£ÔöÇÔöÇ eslint@8.57.1
+Ôö£ÔöÇÔöÇ next@14.2.33
+Ôö£ÔöÇÔöÇ postcss@8.5.6
+Ôö£ÔöÇÔöÇ react-dom@18.3.1
+Ôö£ÔöÇÔöÇ react@18.3.1
+ÔööÔöÇÔöÇ tailwindcss@3.4.17
+

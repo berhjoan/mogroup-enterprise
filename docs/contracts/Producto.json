@@ -1,0 +1,11 @@
+{
+  "id": "string",
+  "sku_interno": "string",
+  "nombre": "string",
+  "descripcion": "string",
+  "categoria": "string",
+  "marca": "string",
+  "unidad": "string",
+  "activo": true,
+  "atributos": { "color": "string", "tamano": "string" }
+}

@@ -1,0 +1,10 @@
+services:
+  frontend:
+    command: ["npm","run","dev","--","-p","3000"]
+    volumes:
+      - ./frontend:/app:rw
+      - node_modules_app:/app/node_modules
+    environment:
+      NEXT_TELEMETRY_DISABLED: "1"
+volumes:
+  node_modules_app:

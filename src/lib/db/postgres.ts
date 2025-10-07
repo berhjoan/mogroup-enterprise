@@ -1,24 +1,20 @@
-import { Pool } from 'pg';
+import { Pool, QueryResult } from 'pg'
 
-let pool: Pool | null = null;
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false
+})
 
-export function getPool() {
-  if (!pool) {
-    pool = new Pool({
-      connectionString: process.env.DATABASE_URL,
-      ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
-    });
-  }
-  return pool;
-}
-
-export async function query(text: string, params?: any[]) {
-  const pool = getPool();
+// Función query que esperan los otros archivos
+export async function query(text: string, params?: any[]): Promise<QueryResult> {
+  const client = await pool.connect()
   try {
-    const result = await pool.query(text, params);
-    return result;
-  } catch (error) {
-    console.error('Database query error:', error);
-    throw error;
+    const result = await client.query(text, params)
+    return result
+  } finally {
+    client.release()
   }
 }
+
+// Exportar también el pool por si se necesita
+export { pool }

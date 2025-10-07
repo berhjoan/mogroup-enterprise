@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mogroup.local/schemas/lista_precio.v1.json",
+  "title": "ListaPrecio",
+  "type": "object",
+  "required": ["id","version","moneda","items","vigente_desde"],
+  "properties": {
+    "id": { "type":"string" },
+    "version": { "type":"string" },
+    "moneda": { "type":"string", "minLength":3, "maxLength":3 },
+    "vigente_desde": { "type":"string", "format":"date-time" },
+    "vigente_hasta": { "type":["string","null"], "format":"date-time" },
+    "items": {
+      "type":"array",
+      "items": {
+        "type":"object",
+        "required":["sku","precio_unitario"],
+        "properties":{
+          "sku":{ "type":"string" },
+          "precio_unitario":{ "type":"number","minimum":0 },
+          "descuento_pct":{ "type":"number","minimum":0,"maximum":100 }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

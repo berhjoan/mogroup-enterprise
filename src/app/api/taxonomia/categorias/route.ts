@@ -1,23 +1,13 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { query } from '@/lib/db/postgres';
+import { NextRequest, NextResponse } from 'next/server'
 
-export const runtime = 'nodejs';
-
-export async function GET(req: NextRequest) {
+export async function GET(request: NextRequest) {
   try {
-    const clasificacionId = req.nextUrl.searchParams.get('clasificacion_id');
-    let sql = 'SELECT * FROM categorias';
-    const params: any[] = [];
-    
-    if (clasificacionId) {
-      sql += ' WHERE clasificacion_id = $1';
-      params.push(clasificacionId);
-    }
-    
-    sql += ' ORDER BY nombre';
-    const result = await query(sql, params);
-    return NextResponse.json({ categorias: result.rows }, { status: 200 });
-  } catch (error: any) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    const categorias = [
+      { id: 1, nombre: "Categoría Demo 1" },
+      { id: 2, nombre: "Categoría Demo 2" }
+    ]
+    return NextResponse.json({ categorias })
+  } catch (error) {
+    return NextResponse.json({ error: 'Error interno del servidor' }, { status: 500 })
   }
 }

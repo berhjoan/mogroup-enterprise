@@ -1,0 +1,17 @@
+{
+  "event_id": "e5b0f0c0-1111-2222-3333-444455556666",
+  "timestamp": "2025-09-23T19:30:00Z",
+  "origen": "backend",
+  "modulo": "cotizaciones",
+  "accion": "seleccion_proveedor_cotizacion",
+  "referencias": { "cotizacion_id": "C-1234", "cliente_id": "CL-900", "proveedor_id": "PV-010", "producto_id": "PR-777" },
+  "decision": {
+    "reglas_aplicadas": ["menor_costo","sla_48h","margen_min_12"],
+    "costo": 120.5,
+    "margen_estimado": 18.2,
+    "sla_horas": 48,
+    "explicacion": "Proveedor PV-010 ofrece menor costo y cumple SLA con margen ≥ 12%."
+  },
+  "consentimiento": { "requerido": true, "consent_id": "CN-555" },
+  "integridad": { "hash_prev": null, "hash_actual": "b3e1c4..." }
+}

@@ -1,0 +1,31 @@
+from flask import Blueprint, request, jsonify
+import os
+
+# SDK oficial de Gemini (google-genai 1.x)
+from google import genai
+
+bp = Blueprint("ai", __name__, url_prefix="/api/v1/ai")
+
+# Inicialización del cliente leyendo GOOGLE_API_KEY del entorno
+_client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
+
+# Modelo por defecto; se puede cambiar vía env MODEL_ID si se desea
+_MODEL_ID = os.getenv("MODEL_ID", "gemini-2.0-flash")
+
+@bp.post("/chat")
+def chat():
+    data = request.get_json(silent=True) or {}
+    prompt = data.get("prompt") or data.get("message") or data.get("input") or ""
+    if not prompt:
+        return jsonify({"error": "missing prompt"}), 400
+
+    try:
+        # Llamada simple sin thinking_config; respuesta compacta
+        resp = _client.models.generate_content(model=_MODEL_ID, contents=prompt)
+        text = getattr(resp, "text", None) or ""
+        if not text:
+            # Fallback por si el SDK cambia la estructura
+            text = str(resp)
+        return jsonify({"answer": text}), 200
+    except Exception as e:
+        return jsonify({"error": "ai_call_failed", "detail": str(e)}), 500

@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mogroup.local/schemas/guardian_event.v1.json",
+  "title": "GuardianEvent",
+  "type": "object",
+  "required": ["event_id","timestamp","modulo","accion","decision"],
+  "properties": {
+    "event_id": { "type":"string" },
+    "timestamp": { "type":"string", "format":"date-time" },
+    "origen": { "type":"string" },
+    "modulo": { "type":"string" },
+    "accion": { "type":"string" },
+    "referencias": {
+      "type":"object",
+      "properties":{
+        "cotizacion_id":{ "type":["string","null"] },
+        "cliente_id":{ "type":["string","null"] },
+        "proveedor_id":{ "type":["string","null"] },
+        "producto_id":{ "type":["string","null"] }
+      },
+      "additionalProperties": false
+    },
+    "decision": {
+      "type":"object",
+      "properties":{
+        "reglas_aplicadas":{ "type":"array","items":{"type":"string"} },
+        "costo":{ "type":["number","null"] },
+        "margen_estimado":{ "type":["number","null"] },
+        "sla_horas":{ "type":["number","null"] },
+        "explicacion":{ "type":"string" }
+      },
+      "additionalProperties": false
+    },
+    "consentimiento": {
+      "type":"object",
+      "properties":{
+        "requerido":{ "type":"boolean" },
+        "consent_id":{ "type":["string","null"] }
+      },
+      "additionalProperties": false
+    },
+    "integridad": {
+      "type":"object",
+      "properties":{
+        "hash_prev":{ "type":["string","null"] },
+        "hash_actual":{ "type":"string" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

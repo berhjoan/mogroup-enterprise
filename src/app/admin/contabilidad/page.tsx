@@ -1,9 +1,7 @@
 'use client';
 import DataTable from '@/components/admin/DataTable';
 
-export default function 
-Contabilidad
-Page() {
+export default function ContabilidadPage() {
   const columns = [
 'Factura','Cliente','Monto','Estado'
 ];
