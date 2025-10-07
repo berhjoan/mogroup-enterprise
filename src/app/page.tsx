@@ -309,7 +309,7 @@ export default function HomePage() {
               <div className="space-y-6">
                 {[
                   { icono: <Phone className="w-6 h-6" />, titulo: 'Teléfono', info: '+507 6421-5897' },
-                  { icono: <Mail className="w-6 h-6" />, titulo: 'Email', info: 'info@mogroup.com.pa' },
+                  { icono: <Mail className="w-6 h-6" />, titulo: 'Email', info: 'admin@mogrupo.com' },
                   { icono: <MapPin className="w-6 h-6" />, titulo: 'Ubicación', info: 'Ciudad de Panamá, Panamá' }
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
@@ -409,7 +409,7 @@ export default function HomePage() {
           </div>
           
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p className="text-sm">© 2025 MOGROUP S.A. - Todos los derechos reservados | RUC: 123456-1-123456 | Ciudad de Panamá, Panamá</p>
+            <p className="text-sm">© 2025 MOGROUP S.A. - Todos los derechos reservados | RUC: 155672612-2-2018 dv16 | Ciudad de Panamá, Panamá</p>
           </div>
         </div>
       </footer>
