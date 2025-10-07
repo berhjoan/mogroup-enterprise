@@ -1,21 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Configuración actualizada para Next.js 15.5.4
-  serverExternalPackages: ['sharp'],
-  
+  output: 'standalone',
   images: {
-    remotePatterns: [
-      {
-        protocol: 'http',
-        hostname: 'localhost',
-        port: '3000',
-        pathname: '/**',
-      },
-    ],
+    unoptimized: true,
   },
-  
-  // Optimizaciones
-  reactStrictMode: true,
 }
 
 module.exports = nextConfig
