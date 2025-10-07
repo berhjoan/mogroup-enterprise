@@ -14,7 +14,6 @@ export default function LoginPage() {
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault()
     
-    // Credenciales de prueba (en producción esto debe estar en el backend)
     const validUsers = {
       'BKSYSTEM': '20462108',
       'Henry': 'Henry2046'
@@ -32,7 +31,6 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 flex items-center justify-center p-4">
       <div className="bg-white rounded-3xl shadow-2xl max-w-md w-full overflow-hidden">
-        {/* Header */}
         <div className="bg-gradient-to-r from-blue-600 to-blue-700 p-8 text-center">
           <div className="w-24 h-24 bg-white rounded-2xl mx-auto mb-4 p-4 shadow-lg">
             <Image 
@@ -47,7 +45,6 @@ export default function LoginPage() {
           <p className="text-blue-100 font-medium">Sistema de Gestión Integral</p>
         </div>
 
-        {/* Form */}
         <div className="p-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Iniciar Sesión</h2>
           
@@ -105,7 +102,6 @@ export default function LoginPage() {
           </p>
         </div>
 
-        {/* Footer */}
         <div className="bg-gray-50 px-8 py-4 text-center border-t border-gray-200">
           <p className="text-xs text-gray-600">
             © 2025 MOGROUP S.A. - Todos los derechos reservados
