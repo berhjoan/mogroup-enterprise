@@ -129,10 +129,10 @@ export default function ServiciosPage() {
               💬 WhatsApp: 507-6421-5897
             </a>
             <a 
-              href="mailto:grupomopty@gmail.com"
+              href="mailto:admin@mogrupo.com"
               className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
             >
-              📧 grupomopty@gmail.com
+              📧 admin@mogrupo.com
             </a>
           </div>
         </div>

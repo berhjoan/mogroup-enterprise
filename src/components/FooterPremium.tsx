@@ -94,7 +94,7 @@ export default function FooterPremium() {
                   </svg>
                 </div>
                 <div>
-                  <div className="font-semibold text-white">grupomopty@gmail.com</div>
+                  <div className="font-semibold text-white">admin@mogrupo.com</div>
                   <div className="text-sm text-gray-400">Respuesta en 24hrs</div>
                 </div>
               </div>

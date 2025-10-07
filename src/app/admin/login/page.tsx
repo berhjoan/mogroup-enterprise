@@ -191,7 +191,7 @@ export default function LoginPage() {
           </p>
           <div className="mt-4 flex justify-center space-x-6 text-blue-300 text-sm">
             <span>📞 507-6421-5897</span>
-            <span>📧 grupomopty@gmail.com</span>
+            <span>📧 admin@mogrupo.com</span>
           </div>
         </div>
       </div>
