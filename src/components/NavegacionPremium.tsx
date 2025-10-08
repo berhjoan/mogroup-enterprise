@@ -1,206 +1,154 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import Image from 'next/image'
-import { useState, useEffect } from 'react'
-import { usePathname } from 'next/navigation'
+import Link from "next/link";
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 export default function NavegacionPremium() {
-  const [menuServicios, setMenuServicios] = useState(false)
-  const [menuMobile, setMenuMobile] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-  const pathname = usePathname()
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  const menuItems = [
-    { href: '/', label: 'Inicio' },
-    { href: '/servicios', label: 'Servicios' },
-    { href: '/catalogo', label: 'Catálogo' },
-    { href: '/empresa', label: 'Empresa' },
-    { href: '/contacto', label: 'Contacto' }
-  ]
-
-  const serviciosSubmenu = [
-    { href: '/servicios/logistica', label: '🚛 Logística Integrada', desc: 'Transporte y distribución' },
-    { href: '/servicios/tecnologia', label: '💻 Tecnología Innovadora', desc: 'Soluciones IT avanzadas' },
-    { href: '/servicios/insumos', label: '🏪 Venta de Insumos', desc: 'Productos B2B certificados' },
-    { href: '/servicios/inventarios', label: '📋 Gestión de Inventarios', desc: 'Control y optimización' },
-    { href: '/servicios/ti', label: '🔧 Servicios TI', desc: 'Soporte técnico integral' },
-    { href: '/servicios/web', label: '🌐 Desarrollo Web', desc: 'Páginas profesionales' }
-  ]
+  const [isServiciosOpen, setIsServiciosOpen] = useState(false);
+  const [isOtrosOpen, setIsOtrosOpen] = useState(false);
 
   return (
-    <>
-      {/* Navegación Principal */}
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/95 backdrop-blur-md shadow-xl' : 'bg-white shadow-lg'
-      }`}>
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex justify-between items-center h-20">
-            {/* Logo MOGROUP Prominente */}
-            <Link href="/" className="flex items-center space-x-4 hover:opacity-80 transition-opacity">
-              <Image 
-                src="/logo.jpg" 
-                alt="MOGROUP Logo" 
-                width={60} 
-                height={60} 
-                className="rounded-lg shadow-md"
-              />
-              <div>
-                <div className="text-3xl font-bold text-blue-600">MOGROUP</div>
-                <div className="text-sm text-gray-500 font-medium">Logística • Tecnología • Insumos</div>
-              </div>
-            </Link>
-            
-            {/* Menu Desktop */}
-            <div className="hidden lg:flex items-center space-x-8">
-              {menuItems.map((item) => (
-                <div key={item.href} className="relative">
-                  {item.label === 'Servicios' ? (
-                    <div className="relative">
-                      <button 
-                        onClick={() => setMenuServicios(!menuServicios)}
-                        className={`flex items-center space-x-1 px-4 py-2 rounded-lg font-medium transition-all ${
-                          pathname.startsWith('/servicios') 
-                            ? 'text-blue-600 bg-blue-50' 
-                            : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
-                        }`}
-                      >
-                        <span>Servicios</span>
-                        <svg className={`w-4 h-4 transition-transform ${menuServicios ? 'rotate-180' : ''}`} 
-                             fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                        </svg>
-                      </button>
-                      
-                      {/* Mega Menu Servicios */}
-                      {menuServicios && (
-                        <div className="absolute top-full left-0 mt-2 w-96 bg-white shadow-2xl rounded-xl border border-gray-100 py-4 z-50">
-                          <div className="px-4 py-2 border-b border-gray-100">
-                            <h3 className="font-bold text-gray-900">Servicios MOGROUP</h3>
-                            <p className="text-sm text-gray-500">Soluciones empresariales integrales</p>
-                          </div>
-                          <div className="py-2">
-                            {serviciosSubmenu.map((servicio) => (
-                              <Link 
-                                key={servicio.href}
-                                href={servicio.href}
-                                className="block px-4 py-3 hover:bg-blue-50 transition-colors"
-                                onClick={() => setMenuServicios(false)}
-                              >
-                                <div className="font-semibold text-gray-900">{servicio.label}</div>
-                                <div className="text-sm text-gray-500">{servicio.desc}</div>
-                              </Link>
-                            ))}
-                          </div>
-                          <div className="px-4 py-2 border-t border-gray-100">
-                            <Link 
-                              href="/servicios"
-                              className="text-blue-600 hover:text-blue-800 font-medium text-sm"
-                            >
-                              Ver todos los servicios →
-                            </Link>
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  ) : (
-                    <Link 
-                      href={item.href}
-                      className={`px-4 py-2 rounded-lg font-medium transition-all ${
-                        pathname === item.href 
-                          ? 'text-blue-600 bg-blue-50' 
-                          : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
-                      }`}
-                    >
-                      {item.label}
-                    </Link>
-                  )}
-                </div>
-              ))}
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-md">
+      <div className="container mx-auto px-4 py-4">
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-3">
+            <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-xl">MG</span>
             </div>
-            
-            {/* Botones CTA */}
-            <div className="hidden lg:flex items-center space-x-4">
-              <a 
-                href="tel:+50764215897" 
-                className="flex items-center space-x-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-all shadow-lg"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                <span>507-6421-5897</span>
-              </a>
-              <Link 
-                href="/admin" 
-                className="flex items-center space-x-2 bg-gradient-to-r from-purple-600 to-purple-700 text-white px-4 py-2 rounded-lg hover:from-purple-700 hover:to-purple-800 transition-all shadow-lg"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
-                <span>MOGROUP Enterprise</span>
-              </Link>
+            <div className="flex flex-col">
+              <span className="text-2xl font-bold text-gray-900">MOGROUP</span>
+              <span className="text-xs text-gray-600 -mt-1">Logística & Tecnología</span>
             </div>
+          </Link>
 
-            {/* Menu Mobile Toggle */}
-            <button 
-              onClick={() => setMenuMobile(!menuMobile)}
-              className="lg:hidden p-2 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-blue-50"
+          {/* Navegación Desktop */}
+          <nav className="hidden lg:flex items-center space-x-1">
+            <Link
+              href="/"
+              className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
-                      d={menuMobile ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
-              </svg>
-            </button>
-          </div>
-        </div>
+              Inicio
+            </Link>
 
-        {/* Menu Mobile */}
-        {menuMobile && (
-          <div className="lg:hidden bg-white border-t border-gray-200 shadow-xl">
-            <div className="px-4 py-2 space-y-1">
-              {menuItems.map((item) => (
-                <Link 
-                  key={item.href}
-                  href={item.href}
-                  className={`block px-4 py-3 rounded-lg font-medium transition-colors ${
-                    pathname === item.href 
-                      ? 'text-blue-600 bg-blue-50' 
-                      : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
-                  }`}
-                  onClick={() => setMenuMobile(false)}
+            {/* Menú Servicios */}
+            <div className="relative group">
+              <button
+                className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center gap-1"
+                onMouseEnter={() => setIsServiciosOpen(true)}
+                onMouseLeave={() => setIsServiciosOpen(false)}
+              >
+                Servicios
+                <ChevronDown className="w-4 h-4" />
+              </button>
+
+              {isServiciosOpen && (
+                <div
+                  className="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-xl border border-gray-100 py-2"
+                  onMouseEnter={() => setIsServiciosOpen(true)}
+                  onMouseLeave={() => setIsServiciosOpen(false)}
                 >
-                  {item.label}
-                </Link>
-              ))}
-              <div className="pt-4 space-y-2">
-                <a 
-                  href="tel:+50764215897"
-                  className="block bg-green-600 text-white px-4 py-3 rounded-lg text-center font-medium"
-                >
-                  📞 507-6421-5897
-                </a>
-                <Link 
-                  href="/admin"
-                  className="block bg-purple-600 text-white px-4 py-3 rounded-lg text-center font-medium"
-                >
-                  🏢 MOGROUP Enterprise
-                </Link>
-              </div>
+                  <Link
+                    href="/servicios/transporte"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                  >
+                    🚛 Transporte
+                  </Link>
+                  <Link
+                    href="/servicios/logistica"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                  >
+                    📦 Logística
+                  </Link>
+                  <Link
+                    href="/servicios/insumos"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                  >
+                    🛒 Insumos B2B
+                  </Link>
+
+                  <div className="border-t border-gray-200 my-2"></div>
+                  <div className="px-4 py-1 text-xs text-gray-500 font-semibold uppercase">
+                    Otros Servicios
+                  </div>
+
+                  <Link
+                    href="/servicios/jardineria"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                  >
+                    🌿 Jardinería
+                  </Link>
+                  <Link
+                    href="/servicios/modificaciones"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                  >
+                    🔧 Modificaciones y Estructura
+                  </Link>
+                  <Link
+                    href="/servicios/software"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                  >
+                    💻 Diseño de Software
+                  </Link>
+                </div>
+              )}
             </div>
-          </div>
-        )}
-      </nav>
 
-      {/* Spacer para navegación fija */}
-      <div className="h-20"></div>
-    </>
-  )
+            <Link
+              href="/catalogo"
+              className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors"
+            >
+              Catálogo
+            </Link>
+
+            <Link
+              href="/empresa"
+              className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors"
+            >
+              Empresa
+            </Link>
+
+            <Link
+              href="/contacto"
+              className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors"
+            >
+              Contacto
+            </Link>
+
+            <Link
+              href="/cotizar"
+              className="ml-4 px-6 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all font-semibold shadow-md hover:shadow-lg"
+            >
+              Cotizar Ahora
+            </Link>
+
+            <Link
+              href="/admin/login"
+              className="ml-2 px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition-all font-semibold text-sm"
+            >
+              MOGROUP-ENTERPRISE
+            </Link>
+          </nav>
+
+          {/* Botón móvil */}
+          <button className="lg:hidden p-2 text-gray-700">
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+  );
 }

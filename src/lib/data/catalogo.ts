@@ -1,0 +1,107 @@
+// ═══════════════════════════════════════════════════════════════════════════
+// 📦 DATOS DEL CATÁLOGO MOGROUP
+// Generado automáticamente: 2025-10-07 23:40:45
+// Rutas verificadas y validadas
+// ═══════════════════════════════════════════════════════════════════════════
+
+export interface CategoriaProducto {
+  id: string;
+  nombre: string;
+  descripcion: string;
+  imagen: string;
+  slug: string;
+  productoCount: number;
+}
+
+export const CATEGORIAS_CATALOGO: CategoriaProducto[] = [
+  {
+    id: "CAFETERIA",
+    nombre: "Suministros de Cafetería",
+    descripcion: "Café, té, azúcar, endulzantes y complementos para tu cafetería empresarial",
+    imagen: "/images/categorias/Suministros_de _Cafetería.png",
+    slug: "suministros-cafeteria",
+    productoCount: 65
+  },
+  {
+    id: "BOLSAS",
+    nombre: "Bolsas y Manejo de Residuos",
+    descripcion: "Bolsas de basura, plásticas y biodegradables para gestión de residuos",
+    imagen: "/images/categorias/Bolsas_y_Manejo_de_Residuos.png",
+    slug: "bolsas-manejo-residuos",
+    productoCount: 89
+  },
+  {
+    id: "EPP",
+    nombre: "Equipos de Protección Personal (EPP)",
+    descripcion: "Mascarillas, guantes, lentes, cascos y equipos de seguridad industrial",
+    imagen: "/images/categorias/Equipos_de_Protección_Personal_(EPP).png",
+    slug: "equipo-proteccion-personal",
+    productoCount: 127
+  },
+  {
+    id: "LIMPIEZA",
+    nombre: "Equipos de Limpieza y Mantenimiento",
+    descripcion: "Herramientas, equipos y accesorios para limpieza profesional",
+    imagen: "/images/categorias/Equipos_de_Limpieza_y_Mantenimiento.png",
+    slug: "equipos-limpieza-mantenimiento",
+    productoCount: 78
+  },
+  {
+    id: "SUMINISTRO",
+    nombre: "Suministros de Oficina",
+    descripcion: "Papelería, archivadores, herramientas de escritorio y artículos de oficina",
+    imagen: "/images/categorias/Suministros_de_Oficina.png",
+    slug: "suministros-oficina",
+    productoCount: 92
+  },
+  {
+    id: "QUIMICOS",
+    nombre: "Productos de Limpieza y Químicos",
+    descripcion: "Limpiadores, desinfectantes, desengrasantes y químicos industriales",
+    imagen: "/images/categorias/Productos_de_Limpieza_y_Quimicos.png",
+    slug: "productos-limpieza-quimicos",
+    productoCount: 54
+  },
+  {
+    id: "PAPELERIA",
+    nombre: "Papelería e Higiene Institucional",
+    descripcion: "Papel higiénico, toallas, servilletas y productos de higiene",
+    imagen: "/images/categorias/Papeleria_e_Higiene_Institucional.png",
+    slug: "papeleria-higiene-institucional",
+    productoCount: 68
+  },
+  {
+    id: "BIO",
+    nombre: "Productos Biodegradables y Ecológicos",
+    descripcion: "Alternativas ecológicas y biodegradables para tu empresa",
+    imagen: "/images/categorias/Productos_Biodegradables_y_Ecológicos.png",
+    slug: "productos-biodegradables-ecologicos",
+    productoCount: 43
+  },
+  {
+    id: "HOTEL",
+    nombre: "Hotelería y Hospitalidad",
+    descripcion: "Amenidades, textiles y productos para hoteles y servicios de hospitalidad",
+    imagen: "/images/categorias/Hotelería_y_Hospitalidad.jpg",
+    slug: "hoteleria-hospitalidad",
+    productoCount: 89
+  },
+  {
+    id: "DESECHABLES",
+    nombre: "Desechables y Food Service",
+    descripcion: "Vasos, platos, cubiertos, contenedores y empaques desechables",
+    imagen: "/images/categorias/Desechables_y_Food_Service.png",
+    slug: "desechables-empaques-food-service",
+    productoCount: 154
+  }
+];
+
+export const TOTAL_PRODUCTOS = CATEGORIAS_CATALOGO.reduce((sum, cat) => sum + cat.productoCount, 0);
+
+export function getCategoriaBySlug(slug: string): CategoriaProducto | undefined {
+  return CATEGORIAS_CATALOGO.find(cat => cat.slug === slug);
+}
+
+export function getCategoriaById(id: string): CategoriaProducto | undefined {
+  return CATEGORIAS_CATALOGO.find(cat => cat.id === id);
+}

@@ -1,15 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
   images: {
-    unoptimized: true,
+    remotePatterns: [],
+    unoptimized: false,
   },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-}
+};
 
-module.exports = nextConfig
+export default nextConfig;
