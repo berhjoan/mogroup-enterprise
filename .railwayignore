@@ -1,6 +1,0 @@
-# Railway ignore file
-node_modules
-.next
-.git
-.env*.local
-*.log
