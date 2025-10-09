@@ -7,7 +7,7 @@ export default function EmpresaPage() {
       <nav className="bg-white shadow-lg">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center h-16">
-            <Link href="/" className="text-2xl font-bold text-blue-600">MOGROUP S.A.</Link>
+            <Link href="/" className="text-3xl font-black drop-shadow-lg text-blue-600">MOGROUP S.A.</Link>
             <div className="hidden md:flex space-x-8">
               <Link href="/" className="text-gray-700 hover:text-blue-600">Inicio</Link>
               <Link href="/servicios" className="text-gray-700 hover:text-blue-600">Servicios</Link>
@@ -59,12 +59,12 @@ export default function EmpresaPage() {
             <div className="space-y-6">
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Representante Legal</h3>
-                <p className="text-gray-600">Kathia Lineth Araúz Rivera</p>
-                <p className="text-gray-500 text-sm">C.I.P. 4-741-2113</p>
+                <p className="text-gray-600"></p>
+                <p className="text-gray-500 text-sm"></p>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Capital Invertido</h3>
-                <p className="text-gray-600">B/.1,000.00</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2"></h3>
+                <p className="text-gray-600"></p>
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Ubicación</h3>
@@ -127,7 +127,7 @@ export default function EmpresaPage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
           <div className="bg-white rounded-xl shadow-lg p-8">
             <div className="text-4xl mb-4 text-center">🎯</div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Misión</h3>
+            <h3 className="text-3xl font-black drop-shadow-lg text-gray-900 mb-4 text-center">Misión</h3>
             <p className="text-gray-600 text-center">
               Ser el socio logístico estratégico de las empresas panameñas, 
               proporcionando soluciones integrales de suministros y transporte 
@@ -137,7 +137,7 @@ export default function EmpresaPage() {
           
           <div className="bg-white rounded-xl shadow-lg p-8">
             <div className="text-4xl mb-4 text-center">🚀</div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Visión</h3>
+            <h3 className="text-3xl font-black drop-shadow-lg text-gray-900 mb-4 text-center">Visión</h3>
             <p className="text-gray-600 text-center">
               Convertirnos en la empresa líder de logística empresarial en 
               Centroamérica, reconocida por nuestra innovación tecnológica 
@@ -147,7 +147,7 @@ export default function EmpresaPage() {
           
           <div className="bg-white rounded-xl shadow-lg p-8">
             <div className="text-4xl mb-4 text-center">⭐</div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Valores</h3>
+            <h3 className="text-3xl font-black drop-shadow-lg text-gray-900 mb-4 text-center">Valores</h3>
             <ul className="text-gray-600 space-y-2">
               <li>• Excelencia en el servicio</li>
               <li>• Innovación tecnológica</li>
@@ -205,3 +205,9 @@ export default function EmpresaPage() {
     </div>
   )
 }
+
+
+
+
+
+

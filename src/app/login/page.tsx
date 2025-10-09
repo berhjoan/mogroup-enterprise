@@ -22,7 +22,7 @@ export default function LoginPage() {
     if (validUsers[username as keyof typeof validUsers] === password) {
       localStorage.setItem('authenticated', 'true')
       localStorage.setItem('username', username)
-      router.push('/catalogo')
+      router.push('/admin')
     } else {
       setError('Usuario o contraseña incorrectos')
     }
@@ -111,3 +111,5 @@ export default function LoginPage() {
     </div>
   )
 }
+
+

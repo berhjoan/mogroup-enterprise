@@ -47,9 +47,11 @@ function generarRespuestaKat(consulta: string, productos: ProductoEncontrado[] =
   }
   
   if (consulta_lower.includes('empresa') || consulta_lower.includes('mogroup') || consulta_lower.includes('quienes')) {
-    return `🏢 ¡Gracias por tu interés en MOGROUP S.A.!\n\nSomos una empresa panameña constituida desde 2018:\n• RUC: 155672612-2-2018\n• Representante Legal: Kathia Lineth Araúz Rivera\n• Especialistas en logística y suministros B2B\n• +379 productos de proveedores certificados\n\nNuestros clientes incluyen: Spigolo, Terpel, Bahía Motor, Pizzería Leonardo y muchas más empresas exitosas. 🌟`
+    return `🏢 ¡Gracias por tu interés en MOGROUP S.A.!\n\nSomos una empresa panameña constituida desde 2018:\n• RUC: 155672612-2-2018\n• Representante Legal: \n• Especialistas en logística y suministros B2B\n• +379 productos de proveedores certificados\n\nNuestros clientes incluyen: Spigolo, Terpel, Bahía Motor, Pizzería Leonardo y muchas más empresas exitosas. 🌟`
   }
   
   // Respuesta general
   return `¡Hola! Soy Kat, tu asistente empresarial de MOGROUP S.A. 🚀\n\n${productos.length > 0 ? `He encontrado ${productos.length} productos relacionados con "${consulta}" en nuestro catálogo de 379+ productos certificados.\n\n` : ''}Como empresa panameña líder en logística y suministros B2B, puedo ayudarte con:\n\n✅ Productos de cafetería y bebidas\n✅ Limpieza y químicos industriales  \n✅ Papelería e higiene institucional\n✅ Food service y desechables\n✅ Herramientas y equipos\n\n¿En qué categoría te puedo asistir hoy? 💼`
 }
+
+

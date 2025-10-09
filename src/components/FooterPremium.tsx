@@ -28,7 +28,6 @@ export default function FooterPremium() {
             </p>
             <div className="space-y-2 text-sm">
               <div><strong className="text-white">RUC:</strong> 155672612-2-2018</div>
-              <div><strong className="text-white">Rep. Legal:</strong> Kathia Lineth Araúz Rivera</div>
               <div className="flex items-center space-x-2">
                 <span className="w-2 h-2 bg-green-500 rounded-full"></span>
                 <span>Empresa Constituida • 7 años</span>
@@ -154,3 +153,7 @@ export default function FooterPremium() {
     </footer>
   )
 }
+
+
+
+

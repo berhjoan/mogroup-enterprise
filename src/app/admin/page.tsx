@@ -71,7 +71,31 @@ export default function AdminDashboard() {
     }
   ]
 
-  return (
+  
+  // Sistema de autenticación
+  const router = useRouter()
+  const [authenticated, setAuthenticated] = useState(false)
+
+  useEffect(() => {
+    const isAuth = localStorage.getItem('authenticated')
+    if (isAuth !== 'true') {
+      router.push('/login')
+    } else {
+      setAuthenticated(true)
+    }
+  }, [router])
+
+  if (!authenticated) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Verificando acceso...</p>
+        </div>
+      </div>
+    )
+  }
+return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Header */}
       <div className="bg-gradient-to-r from-blue-700 via-blue-800 to-indigo-900 text-white shadow-2xl">
@@ -216,3 +240,5 @@ export default function AdminDashboard() {
     </div>
   )
 }
+
+
