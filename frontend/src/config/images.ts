@@ -17,17 +17,17 @@ export const IMAGES = {
     insumos: '/images/servicios/insumos.jpg',
   },
 
-  // CATEGORÍAS DEL CATÁLOGO
+  // CATEGORÍAS DEL CATÁLOGO (USANDO PNG PARA EVITAR PROBLEMAS)
   categorias: {
-    hoteleria: 'https://placehold.co/600x400/2563eb/fff?text=Hoteleria',
-    cafeteria: 'https://placehold.co/600x400/7c3aed/fff?text=Cafeteria',
-    limpieza: 'https://placehold.co/600x400/0891b2/fff?text=Limpieza',
+    hoteleria: 'https://placehold.co/600x400/2563eb/fff.png?text=Hoteleria',
+    cafeteria: 'https://placehold.co/600x400/7c3aed/fff.png?text=Cafeteria',
+    limpieza: 'https://placehold.co/600x400/0891b2/fff.png?text=Limpieza',
   },
 
   // PRODUCTOS (PLACEHOLDER)
   productos: {
-    placeholder: 'https://placehold.co/400x300/666/fff?text=Producto',
-    noImage: 'https://placehold.co/400x300/999/fff?text=Sin+Imagen',
+    placeholder: 'https://placehold.co/400x300/666/fff.png?text=Producto',
+    noImage: 'https://placehold.co/400x300/999/fff.png?text=Sin+Imagen',
   },
 }
 
