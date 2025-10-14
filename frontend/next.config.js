@@ -1,10 +1,11 @@
-const path = require('path');
-/** @type {import('next').NextConfig} */
+/** @type {import('next').Config} */
 const nextConfig = {
-  webpack: (config) => {
-    config.resolve.alias['@components'] = path.join(__dirname, 'app/components');
-    config.resolve.alias['@'] = path.join(__dirname, 'app');
-    return config;
+  images: {
+    domains: ['placehold.co'],
+    formats: ['image/avif', 'image/webp'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
-};
-module.exports = nextConfig;
+}
+
+module.exports = nextConfig
