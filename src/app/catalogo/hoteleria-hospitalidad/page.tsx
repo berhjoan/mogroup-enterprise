@@ -27,7 +27,7 @@ export default function HoteleriaHospitalidadPage() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-gray-100">
       {/* HERO SECTION */}
       <section className="relative bg-gradient-to-br from-blue-700 via-indigo-700 to-purple-800 text-white py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-black/90"></div>
+        <div className="absolute inset-0 bg-black/10"></div>
         <div className="absolute top-10 right-10 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-10 left-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
         
@@ -233,10 +233,6 @@ export default function HoteleriaHospitalidadPage() {
     </div>
   );
 }
-
-
-
-
 
 
 

@@ -1,0 +1,8 @@
+backend/
+scripts/
+docs/
+*.md
+.git/
+node_modules/
+.next/
+.env.local

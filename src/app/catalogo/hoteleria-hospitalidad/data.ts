@@ -846,4 +846,3 @@ export function getProductosPorCategoria(categoriaId: string): Producto[] {
 }
 
 
-
