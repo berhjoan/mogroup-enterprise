@@ -124,7 +124,7 @@ export default function NavegacionPremium() {
             </Link>
 
             <Link
-              href="/admin/login"
+              href="/enterprise/login"
               className="ml-2 px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition-all font-semibold text-sm"
             >
               MOGROUP-ENTERPRISE
@@ -152,3 +152,4 @@ export default function NavegacionPremium() {
     </header>
   );
 }
+

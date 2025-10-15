@@ -9,10 +9,11 @@ export default function HeroTransporte() {
         <p className="text-xl max-w-3xl mx-auto mb-8">
           Ser el socio logístico estratégico de las empresas panameñas
         </p>
-        <a href="/admin/proveedores" className="bg-white text-blue-700 px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors inline-block">
+        <a href="/enterprise/proveedores" className="bg-white text-blue-700 px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors inline-block">
           Ver Proveedores →
         </a>
       </div>
     </section>
   )
 }
+

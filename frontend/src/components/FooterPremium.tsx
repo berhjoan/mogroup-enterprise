@@ -54,7 +54,7 @@ export default function FooterPremium() {
             <ul className="space-y-3">
               <li><Link href="/empresa" className="hover:text-blue-400 transition-colors">Acerca de MOGROUP</Link></li>
               <li><Link href="/catalogo" className="hover:text-blue-400 transition-colors">Catálogo de Productos</Link></li>
-              <li><Link href="/admin" className="hover:text-blue-400 transition-colors">MOGROUP Enterprise</Link></li>
+              <li><Link href="/enterprise" className="hover:text-blue-400 transition-colors">MOGROUP Enterprise</Link></li>
               <li><Link href="/contacto" className="hover:text-blue-400 transition-colors">Contacto</Link></li>
             </ul>
             <div className="space-y-2">
@@ -122,7 +122,7 @@ export default function FooterPremium() {
                 <span>WhatsApp</span>
               </a>
               <Link 
-                href="/admin"
+                href="/enterprise"
                 className="flex items-center justify-center space-x-2 bg-purple-600 text-white px-4 py-3 rounded-lg hover:bg-purple-700 transition-colors"
               >
                 <span>🏢</span>
@@ -153,6 +153,7 @@ export default function FooterPremium() {
     </footer>
   )
 }
+
 
 
 

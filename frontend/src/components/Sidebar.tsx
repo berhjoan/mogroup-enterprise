@@ -11,14 +11,14 @@ export default function Sidebar() {
 
   const menuItems = [
     { nombre: 'Dashboard', icono: <LayoutDashboard className="w-5 h-5" />, ruta: '/admin', exactMatch: true },
-    { nombre: 'Proveedores', icono: <Package className="w-5 h-5" />, ruta: '/admin/proveedores' },
-    { nombre: 'Clientes', icono: <Users className="w-5 h-5" />, ruta: '/admin/clientes' },
-    { nombre: 'Inventario', icono: <BarChart3 className="w-5 h-5" />, ruta: '/admin/inventario' },
-    { nombre: 'Cotizaciones', icono: <FileText className="w-5 h-5" />, ruta: '/admin/cotizaciones' },
-    { nombre: 'Pedidos', icono: <FileText className="w-5 h-5" />, ruta: '/admin/pedidos' },
-    { nombre: 'Transporte', icono: <Truck className="w-5 h-5" />, ruta: '/admin/transporte' },
-    { nombre: 'Contabilidad', icono: <DollarSign className="w-5 h-5" />, ruta: '/admin/contabilidad' },
-    { nombre: 'Configuración', icono: <Settings className="w-5 h-5" />, ruta: '/admin/configuracion' }
+    { nombre: 'Proveedores', icono: <Package className="w-5 h-5" />, ruta: '/enterprise/proveedores' },
+    { nombre: 'Clientes', icono: <Users className="w-5 h-5" />, ruta: '/enterprise/clientes' },
+    { nombre: 'Inventario', icono: <BarChart3 className="w-5 h-5" />, ruta: '/enterprise/inventario' },
+    { nombre: 'Cotizaciones', icono: <FileText className="w-5 h-5" />, ruta: '/enterprise/cotizaciones' },
+    { nombre: 'Pedidos', icono: <FileText className="w-5 h-5" />, ruta: '/enterprise/pedidos' },
+    { nombre: 'Transporte', icono: <Truck className="w-5 h-5" />, ruta: '/enterprise/transporte' },
+    { nombre: 'Contabilidad', icono: <DollarSign className="w-5 h-5" />, ruta: '/enterprise/contabilidad' },
+    { nombre: 'Configuración', icono: <Settings className="w-5 h-5" />, ruta: '/enterprise/configuracion' }
   ]
 
   const isActive = (ruta: string, exactMatch?: boolean) => {
@@ -91,4 +91,5 @@ export default function Sidebar() {
     </div>
   )
 }
+
 

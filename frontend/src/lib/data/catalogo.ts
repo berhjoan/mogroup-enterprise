@@ -26,7 +26,7 @@ export const CATEGORIAS_CATALOGO: CategoriaProducto[] = [
     id: "BOLSAS",
     nombre: "Bolsas y Manejo de Residuos",
     descripcion: "Bolsas de basura, plásticas y biodegradables para gestión de residuos",
-    imagen: "/images/categorias/Bolsas_y_Manejo_de_Residuos.png",
+    imagen: "/images/categorias/bolsas-y-manejo-de-residuos.png",
     slug: "bolsas-manejo-residuos",
     productoCount: 89
   },
@@ -34,7 +34,7 @@ export const CATEGORIAS_CATALOGO: CategoriaProducto[] = [
     id: "EPP",
     nombre: "Equipos de Protección Personal (EPP)",
     descripcion: "Mascarillas, guantes, lentes, cascos y equipos de seguridad industrial",
-    imagen: "/images/categorias/Equipos_de_Protección_Personal_(EPP).png",
+    imagen: "/images/categorias/equipos-de-proteccion-personal-epp.png",
     slug: "equipo-proteccion-personal",
     productoCount: 127
   },
@@ -42,7 +42,7 @@ export const CATEGORIAS_CATALOGO: CategoriaProducto[] = [
     id: "LIMPIEZA",
     nombre: "Equipos de Limpieza y Mantenimiento",
     descripcion: "Herramientas, equipos y accesorios para limpieza profesional",
-    imagen: "/images/categorias/Equipos_de_Limpieza_y_Mantenimiento.png",
+    imagen: "/images/categorias/equipos-de-limpieza-y-mantenimiento.png",
     slug: "equipos-limpieza-mantenimiento",
     productoCount: 78
   },
@@ -50,7 +50,7 @@ export const CATEGORIAS_CATALOGO: CategoriaProducto[] = [
     id: "SUMINISTRO",
     nombre: "Suministros de Oficina",
     descripcion: "Papelería, archivadores, herramientas de escritorio y artículos de oficina",
-    imagen: "/images/categorias/Suministros_de_Oficina.png",
+    imagen: "/images/categorias/suministros-de-oficina.png",
     slug: "suministros-oficina",
     productoCount: 92
   },
@@ -58,7 +58,7 @@ export const CATEGORIAS_CATALOGO: CategoriaProducto[] = [
     id: "QUIMICOS",
     nombre: "Productos de Limpieza y Químicos",
     descripcion: "Limpiadores, desinfectantes, desengrasantes y químicos industriales",
-    imagen: "/images/categorias/Productos_de_Limpieza_y_Quimicos.png",
+    imagen: "/images/categorias/productos-de-limpieza-y-quimicos.png",
     slug: "productos-limpieza-quimicos",
     productoCount: 54
   },
@@ -66,7 +66,7 @@ export const CATEGORIAS_CATALOGO: CategoriaProducto[] = [
     id: "PAPELERIA",
     nombre: "Papelería e Higiene Institucional",
     descripcion: "Papel higiénico, toallas, servilletas y productos de higiene",
-    imagen: "/images/categorias/Papeleria_e_Higiene_Institucional.png",
+    imagen: "/images/categorias/papeleria-e-higiene-institucional.png",
     slug: "papeleria-higiene-institucional",
     productoCount: 68
   },
@@ -74,7 +74,7 @@ export const CATEGORIAS_CATALOGO: CategoriaProducto[] = [
     id: "BIO",
     nombre: "Productos Biodegradables y Ecológicos",
     descripcion: "Alternativas ecológicas y biodegradables para tu empresa",
-    imagen: "/images/categorias/Productos_Biodegradables_y_Ecológicos.png",
+    imagen: "/images/categorias/productos-biodegradables-y-ecologicos.png",
     slug: "productos-biodegradables-ecologicos",
     productoCount: 43
   },
@@ -82,7 +82,7 @@ export const CATEGORIAS_CATALOGO: CategoriaProducto[] = [
     id: "HOTEL",
     nombre: "Hotelería y Hospitalidad",
     descripcion: "Amenidades, textiles y productos para hoteles y servicios de hospitalidad",
-    imagen: "/images/categorias/Hotelería_y_Hospitalidad.jpg",
+    imagen: "/images/categorias/hoteleria-y-hospitalidad.jpg",
     slug: "hoteleria-hospitalidad",
     productoCount: 89
   },
@@ -90,7 +90,7 @@ export const CATEGORIAS_CATALOGO: CategoriaProducto[] = [
     id: "DESECHABLES",
     nombre: "Desechables y Food Service",
     descripcion: "Vasos, platos, cubiertos, contenedores y empaques desechables",
-    imagen: "/images/categorias/Desechables_y_Food_Service.png",
+    imagen: "/images/categorias/desechables-y-food-service.png",
     slug: "desechables-empaques-food-service",
     productoCount: 154
   }
@@ -105,3 +105,5 @@ export function getCategoriaBySlug(slug: string): CategoriaProducto | undefined 
 export function getCategoriaById(id: string): CategoriaProducto | undefined {
   return CATEGORIAS_CATALOGO.find(cat => cat.id === id);
 }
+
+

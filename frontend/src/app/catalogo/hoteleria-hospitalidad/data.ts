@@ -40,7 +40,7 @@ const AMENIDADES_BAÑO: Categoria = {
   id: "AMENIDADES_BAÑO",
   nombre: "Amenidades de Baño",
   descripcion: "Productos de higiene personal de alta calidad para habitaciones de hotel",
-  imagen: "/images/categorias/hoteleria/Amenidades_de_Baño.png",
+  imagen: "/images/categorias/hoteleria/amenidades-de-bano.png",
   slug: "amenidades-bano",
   productoCount: 9,
   colorPrimario: "blue",
@@ -51,7 +51,7 @@ const AMENIDADES_BAÑO: Categoria = {
       nombre: "Jabón en Barra Hotel 15g",
       descripcion: "Jabón en barra premium para amenidad hotelera, presentación individual de 15 gramos con envoltura elegante",
       palabrasClave: ["jabón", "barra", "hotel", "amenidad", "15g"],
-      imagen: "/images/categorias/hoteleria/productos/jabon-barra-15g.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "AMENIDADES_BAÑO",
       especificaciones: { tamaño: "15g", material: "Jabón de tocador premium" }
     },
@@ -60,7 +60,7 @@ const AMENIDADES_BAÑO: Categoria = {
       nombre: "Jabón en Barra Hotel 20g",
       descripcion: "Jabón en barra premium para amenidad hotelera, presentación individual de 20 gramos con mayor duración",
       palabrasClave: ["jabón", "barra", "hotel", "amenidad", "20g"],
-      imagen: "/images/categorias/hoteleria/productos/jabon-barra-20g.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "AMENIDADES_BAÑO",
       especificaciones: { tamaño: "20g", material: "Jabón de tocador premium" }
     },
@@ -69,7 +69,7 @@ const AMENIDADES_BAÑO: Categoria = {
       nombre: "Shampoo Sobre Hotel 10ml",
       descripcion: "Shampoo en sobre monodosis para amenidades hoteleras, presentación práctica de 10ml",
       palabrasClave: ["shampoo", "sobre", "hotel", "amenidad", "10ml"],
-      imagen: "/images/categorias/hoteleria/productos/shampoo-sobre-10ml.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "AMENIDADES_BAÑO",
       especificaciones: { tamaño: "10ml", contenido: "Shampoo monodosis" }
     },
@@ -78,7 +78,7 @@ const AMENIDADES_BAÑO: Categoria = {
       nombre: "Shampoo Botella Hotel 30ml",
       descripcion: "Shampoo en botella para amenidades hoteleras, presentación elegante de 30ml",
       palabrasClave: ["shampoo", "botella", "hotel", "amenidad", "30ml"],
-      imagen: "/images/categorias/hoteleria/productos/shampoo-botella-30ml.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "AMENIDADES_BAÑO",
       especificaciones: { tamaño: "30ml", material: "Botella PET" }
     },
@@ -87,7 +87,7 @@ const AMENIDADES_BAÑO: Categoria = {
       nombre: "Acondicionador Sobre Hotel 10ml",
       descripcion: "Acondicionador en sobre monodosis para amenidades hoteleras, 10ml de suavidad",
       palabrasClave: ["acondicionador", "sobre", "hotel", "10ml"],
-      imagen: "/images/categorias/hoteleria/productos/acondicionador-sobre-10ml.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "AMENIDADES_BAÑO",
       especificaciones: { tamaño: "10ml", contenido: "Acondicionador monodosis" }
     },
@@ -96,7 +96,7 @@ const AMENIDADES_BAÑO: Categoria = {
       nombre: "Acondicionador Botella Hotel 30ml",
       descripcion: "Acondicionador en botella para amenidades hoteleras, 30ml en presentación premium",
       palabrasClave: ["acondicionador", "botella", "hotel", "30ml"],
-      imagen: "/images/categorias/hoteleria/productos/acondicionador-botella-30ml.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "AMENIDADES_BAÑO",
       especificaciones: { tamaño: "30ml", material: "Botella PET" }
     },
@@ -105,7 +105,7 @@ const AMENIDADES_BAÑO: Categoria = {
       nombre: "Gel de Baño Sobre Hotel 10ml",
       descripcion: "Gel de baño en sobre monodosis para amenidades hoteleras, 10ml refrescante",
       palabrasClave: ["gel baño", "sobre", "hotel", "amenidad", "10ml"],
-      imagen: "/images/categorias/hoteleria/productos/gel-baño-sobre-10ml.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "AMENIDADES_BAÑO",
       especificaciones: { tamaño: "10ml", contenido: "Gel de baño monodosis" }
     },
@@ -114,7 +114,7 @@ const AMENIDADES_BAÑO: Categoria = {
       nombre: "Kit de Baño 3 en 1 Hotel",
       descripcion: "Kit completo 3 en 1 con shampoo, acondicionador y gel de baño para amenidades hoteleras",
       palabrasClave: ["kit baño", "3 en 1", "hotel", "amenidades"],
-      imagen: "/images/categorias/hoteleria/productos/kit-baño-3en1.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "AMENIDADES_BAÑO",
       especificaciones: { contenido: "Shampoo + Acondicionador + Gel de baño" }
     },
@@ -123,7 +123,7 @@ const AMENIDADES_BAÑO: Categoria = {
       nombre: "Crema Corporal Loción Hotel 10ml",
       descripcion: "Loción corporal hidratante para amenidades hoteleras, 10ml de suavidad para la piel",
       palabrasClave: ["crema corporal", "loción", "hotel", "10ml"],
-      imagen: "/images/categorias/hoteleria/productos/crema-corporal-10ml.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "AMENIDADES_BAÑO",
       especificaciones: { tamaño: "10ml", contenido: "Loción hidratante" }
     }
@@ -138,7 +138,7 @@ const KITS_HIGIENE: Categoria = {
   id: "KITS_HIGIENE",
   nombre: "Kits de Higiene Personal",
   descripcion: "Kits completos y accesorios de higiene personal para huéspedes",
-  imagen: "/images/categorias/hoteleria/Kits_de_Higiene_Personal.png",
+  imagen: "/images/categorias/hoteleria/kits-de-higiene-personal.png",
   slug: "kits-higiene",
   productoCount: 8,
   colorPrimario: "emerald",
@@ -149,7 +149,7 @@ const KITS_HIGIENE: Categoria = {
       nombre: "Kit Dental Completo Hotel",
       descripcion: "Kit dental completo con cepillo de dientes y pasta dental para hotel, higiene bucal garantizada",
       palabrasClave: ["kit dental", "cepillo", "pasta", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/kit-dental.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "KITS_HIGIENE",
       especificaciones: { contenido: "Cepillo de dientes + Pasta dental" }
     },
@@ -158,7 +158,7 @@ const KITS_HIGIENE: Categoria = {
       nombre: "Kit de Afeitar Hotel",
       descripcion: "Kit de afeitar con rastrillo desechable y crema para hotel, afeitado suave profesional",
       palabrasClave: ["kit afeitar", "rastrillo", "crema", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/kit-afeitar.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "KITS_HIGIENE",
       especificaciones: { contenido: "Rastrillo desechable + Crema de afeitar" }
     },
@@ -167,7 +167,7 @@ const KITS_HIGIENE: Categoria = {
       nombre: "Peine Individual Hotel",
       descripcion: "Peine individual desechable para amenidades hoteleras, diseño ergonómico y práctico",
       palabrasClave: ["peine", "individual", "hotel", "amenidad"],
-      imagen: "/images/categorias/hoteleria/productos/peine-individual.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "KITS_HIGIENE",
       especificaciones: { material: "Plástico de alta calidad" }
     },
@@ -176,7 +176,7 @@ const KITS_HIGIENE: Categoria = {
       nombre: "Ungüento Mentolado",
       descripcion: "Bálsamo mentolado individual para alivio y confort de huéspedes, refrescante",
       palabrasClave: ["UNGÜENTO MENTOLADO"],
-      imagen: "/images/categorias/hoteleria/productos/unguento-mentolado.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "KITS_HIGIENE",
       especificaciones: { contenido: "Bálsamo mentolado individual" }
     },
@@ -185,7 +185,7 @@ const KITS_HIGIENE: Categoria = {
       nombre: "Gorro de Baño Desechable",
       descripcion: "Gorro de baño desechable impermeable para ducha en hotel, protección total del cabello",
       palabrasClave: ["gorro baño", "ducha", "hotel", "desechable"],
-      imagen: "/images/categorias/hoteleria/productos/gorro-baño.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "KITS_HIGIENE",
       especificaciones: { material: "Plástico impermeable" }
     },
@@ -194,7 +194,7 @@ const KITS_HIGIENE: Categoria = {
       nombre: "Cotonetes Hisopos Hotel",
       descripcion: "Cotonetes e hisopos de algodón en empaque individual para hotel",
       palabrasClave: ["cotonetes", "hisopos", "hotel", "algodón"],
-      imagen: "/images/categorias/hoteleria/productos/cotonetes-hisopos.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "KITS_HIGIENE",
       especificaciones: { material: "Algodón 100%" }
     },
@@ -203,7 +203,7 @@ const KITS_HIGIENE: Categoria = {
       nombre: "Lima de Uñas Individual",
       descripcion: "Lima de uñas de cartón individual para amenidades hoteleras, práctica y efectiva",
       palabrasClave: ["lima uñas", "individual", "hotel", "cartón"],
-      imagen: "/images/categorias/hoteleria/productos/lima-uñas.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "KITS_HIGIENE",
       especificaciones: { material: "Cartón emery" }
     },
@@ -212,7 +212,7 @@ const KITS_HIGIENE: Categoria = {
       nombre: "Kit de Costura Hotel",
       descripcion: "Kit de costura completo con agujas, hilos y botones para hotel, solución a emergencias",
       palabrasClave: ["kit costura", "agujas", "hilos", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/kit-costura.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "KITS_HIGIENE",
       especificaciones: { contenido: "Agujas + Hilos + Botones + Alfiler" }
     }
@@ -227,7 +227,7 @@ const TEXTILES_HABITACION: Categoria = {
   id: "TEXTILES_HABITACION",
   nombre: "Textiles para Habitación",
   descripcion: "Ropa de cama y textiles de alta calidad hotelera, sábanas y complementos",
-  imagen: "/images/categorias/hoteleria/Textiles_para_Habitación.png",
+  imagen: "/images/categorias/hoteleria/textiles-para-habitacion.png",
   slug: "textiles-habitacion",
   productoCount: 8,
   colorPrimario: "purple",
@@ -238,7 +238,7 @@ const TEXTILES_HABITACION: Categoria = {
       nombre: "Sábanas Individual Blancas",
       descripcion: "Juego de sábanas blancas de microfibra para cama individual hotel",
       palabrasClave: ["sábanas", "individual", "hotel", "blancas"],
-      imagen: "/images/categorias/hoteleria/productos/sabanas-individual.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "TEXTILES_HABITACION",
       especificaciones: { tamaño: "Twin/Full", material: "Microfibra blanca" }
     },
@@ -247,7 +247,7 @@ const TEXTILES_HABITACION: Categoria = {
       nombre: "Sábanas Matrimonial Blancas",
       descripcion: "Juego de sábanas blancas de microfibra para cama matrimonial hotel",
       palabrasClave: ["sábanas", "matrimonial", "hotel", "blancas"],
-      imagen: "/images/categorias/hoteleria/productos/sabanas-matrimonial.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "TEXTILES_HABITACION",
       especificaciones: { tamaño: "Queen", material: "Microfibra blanca" }
     },
@@ -256,7 +256,7 @@ const TEXTILES_HABITACION: Categoria = {
       nombre: "Sábanas Queen Blancas Premium",
       descripcion: "Juego de sábanas blancas premium de microfibra para cama Queen hotel",
       palabrasClave: ["sábanas", "queen", "hotel", "blancas"],
-      imagen: "/images/categorias/hoteleria/productos/sabanas-queen.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "TEXTILES_HABITACION",
       especificaciones: { tamaño: "Queen", material: "Microfibra premium" }
     },
@@ -265,7 +265,7 @@ const TEXTILES_HABITACION: Categoria = {
       nombre: "Sábanas King Blancas Premium",
       descripcion: "Juego de sábanas blancas premium de microfibra para cama King hotel",
       palabrasClave: ["sábanas", "king", "hotel", "blancas"],
-      imagen: "/images/categorias/hoteleria/productos/sabanas-king.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "TEXTILES_HABITACION",
       especificaciones: { tamaño: "King", material: "Microfibra premium" }
     },
@@ -274,7 +274,7 @@ const TEXTILES_HABITACION: Categoria = {
       nombre: "Fundas de Almohada Estándar",
       descripcion: "Fundas de almohada de microfibra blancas en tamaños estándar hotel",
       palabrasClave: ["fundas", "almohada", "hotel", "estándar"],
-      imagen: "/images/categorias/hoteleria/productos/fundas-almohada.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "TEXTILES_HABITACION",
       especificaciones: { tamaño: "Estándar/Queen/King", material: "Microfibra" }
     },
@@ -283,7 +283,7 @@ const TEXTILES_HABITACION: Categoria = {
       nombre: "Pantuflas Desechables Hotel",
       descripcion: "Pantuflas o zapatillas desechables para comodidad de huéspedes en hotel",
       palabrasClave: ["pantuflas", "zapatillas", "hotel", "desechables"],
-      imagen: "/images/categorias/hoteleria/productos/pantuflas-desechables.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "TEXTILES_HABITACION",
       especificaciones: { material: "Material suave desechable" }
     },
@@ -292,7 +292,7 @@ const TEXTILES_HABITACION: Categoria = {
       nombre: "Pantuflas Terry Hotel",
       descripcion: "Pantuflas de tela toalla terry, suaves y absorbentes para hotel",
       palabrasClave: ["pantuflas", "toalla", "hotel", "terry"],
-      imagen: "/images/categorias/hoteleria/productos/pantuflas-terry.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "TEXTILES_HABITACION",
       especificaciones: { material: "Tela toalla terry" }
     },
@@ -301,7 +301,7 @@ const TEXTILES_HABITACION: Categoria = {
       nombre: "Cubre Zapatos Polietileno",
       descripcion: "Cubre zapatos desechables de polietileno para higiene en hotel",
       palabrasClave: ["cubre zapatos", "polietileno", "desechable"],
-      imagen: "/images/categorias/hoteleria/productos/cubre-zapatos.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "TEXTILES_HABITACION",
       especificaciones: { material: "Polietileno" }
     }
@@ -316,7 +316,7 @@ const TOALLAS_BATAS: Categoria = {
   id: "TOALLAS_BATAS",
   nombre: "Toallas y Batas",
   descripcion: "Toallas 100% algodón y batas de baño hoteleras de máxima calidad y suavidad",
-  imagen: "/images/categorias/hoteleria/Toallas_y_Batas.png",
+  imagen: "/images/categorias/hoteleria/toallas-y-batas.png",
   slug: "toallas-batas",
   productoCount: 7,
   colorPrimario: "rose",
@@ -327,7 +327,7 @@ const TOALLAS_BATAS: Categoria = {
       nombre: "Toallas de Baño 500g Algodón",
       descripcion: "Toallas de baño 100% algodón de 500g, suaves y absorbentes, 27x50 pulgadas",
       palabrasClave: ["toallas", "baño", "hotel", "500g", "algodón"],
-      imagen: "/images/categorias/hoteleria/productos/toallas-500g.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "TOALLAS_BATAS",
       especificaciones: { peso: "500g", dimensiones: "27x50 pulgadas", material: "100% Algodón" }
     },
@@ -336,7 +336,7 @@ const TOALLAS_BATAS: Categoria = {
       nombre: "Toallas de Baño 600g Premium",
       descripcion: "Toallas de baño premium 100% algodón de 600g, máxima suavidad, 27x54 pulgadas",
       palabrasClave: ["toallas", "baño", "hotel", "600g", "premium"],
-      imagen: "/images/categorias/hoteleria/productos/toallas-600g.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "TOALLAS_BATAS",
       especificaciones: { peso: "600g", dimensiones: "27x54 pulgadas", material: "100% Algodón Premium" }
     },
@@ -345,7 +345,7 @@ const TOALLAS_BATAS: Categoria = {
       nombre: "Toallas de Manos 350g",
       descripcion: "Toallas de manos 100% algodón de 350g, tamaño 16x30 pulgadas para hotel",
       palabrasClave: ["toallas", "manos", "hotel", "350g"],
-      imagen: "/images/categorias/hoteleria/productos/toallas-manos.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "TOALLAS_BATAS",
       especificaciones: { peso: "350g", dimensiones: "16x30 pulgadas", material: "100% Algodón" }
     },
@@ -354,7 +354,7 @@ const TOALLAS_BATAS: Categoria = {
       nombre: "Toallas Facial 250g",
       descripcion: "Toallas faciales 100% algodón de 250g, tamaño 13x13 pulgadas para hotel",
       palabrasClave: ["toallas", "facial", "hotel", "250g"],
-      imagen: "/images/categorias/hoteleria/productos/toallas-facial.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "TOALLAS_BATAS",
       especificaciones: { peso: "250g", dimensiones: "13x13 pulgadas", material: "100% Algodón" }
     },
@@ -363,7 +363,7 @@ const TOALLAS_BATAS: Categoria = {
       nombre: "Bata de Baño Algodón Terry",
       descripcion: "Bata de baño 100% algodón tipo Terry para hotel, tallas S/M y L/XL",
       palabrasClave: ["bata", "baño", "hotel", "algodón"],
-      imagen: "/images/categorias/hoteleria/productos/bata-algodón.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "TOALLAS_BATAS",
       especificaciones: { material: "100% Algodón Terry", tamaño: "S/M, L/XL" }
     },
@@ -372,7 +372,7 @@ const TOALLAS_BATAS: Categoria = {
       nombre: "Tapete de Baño Antideslizante",
       descripcion: "Tapete de baño antideslizante de algodón para seguridad en hotel",
       palabrasClave: ["tapete", "baño", "hotel", "antideslizante"],
-      imagen: "/images/categorias/hoteleria/productos/tapete-baño.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "TOALLAS_BATAS",
       especificaciones: { material: "Algodón con base antideslizante" }
     },
@@ -381,7 +381,7 @@ const TOALLAS_BATAS: Categoria = {
       nombre: "Cortina de Baño Impermeable",
       descripcion: "Cortina de baño impermeable de poliéster de alta calidad para hotel",
       palabrasClave: ["cortina", "baño", "impermeable", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/cortina-baño.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "TOALLAS_BATAS",
       especificaciones: { material: "Poliéster impermeable" }
     }
@@ -396,7 +396,7 @@ const ALMOHADAS_ROPA_CAMA: Categoria = {
   id: "ALMOHADAS_ROPA_CAMA",
   nombre: "Almohadas y Ropa de Cama Premium",
   descripcion: "Colección completa de almohadas hoteleras de lujo, protectores, toppers y ropa de cama de alta calidad",
-  imagen: "/images/categorias/hoteleria/Almohadas_y_Ropa_de_cama_Premium.png",
+  imagen: "/images/categorias/hoteleria/almohadas-y-ropa-de-cama-premium.png",
   slug: "almohadas-ropa-cama",
   productoCount: 28,
   colorPrimario: "indigo",
@@ -408,7 +408,7 @@ const ALMOHADAS_ROPA_CAMA: Categoria = {
       nombre: "Almohada Micro Gel Cúbica",
       descripcion: "Almohada de micro gel con diseño cuadrado único, soporte excelente y sensación suave",
       palabrasClave: ["almohada", "micro gel", "cúbica", "premium", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/almohada-microgel-cubica.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ALMOHADAS_ROPA_CAMA",
       especificaciones: { tamaño: "Queen, King", material: "Micro Gel" }
     },
@@ -417,7 +417,7 @@ const ALMOHADAS_ROPA_CAMA: Categoria = {
       nombre: "Almohada Micro Gel Clásica",
       descripcion: "Almohada clásica de micro gel con textura esponjosa extra suave, lujo hotelero",
       palabrasClave: ["almohada", "micro gel", "clásica", "lujo", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/almohada-microgel-clasica.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ALMOHADAS_ROPA_CAMA",
       especificaciones: { tamaño: "Queen, King", material: "Micro Gel Clásico" }
     },
@@ -427,7 +427,7 @@ const ALMOHADAS_ROPA_CAMA: Categoria = {
       nombre: "Almohada Luxury Extra Suave",
       descripcion: "Sensación extra suave ideal para un sueño hotelero de cinco estrellas",
       palabrasClave: ["almohada", "luxury", "extra suave", "cinco estrellas", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/almohada-luxury-extra-suave.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ALMOHADAS_ROPA_CAMA",
       especificaciones: { tamaño: "Estándar (45x65cm), Queen (50x70cm), King (50x90cm)" }
     },
@@ -436,7 +436,7 @@ const ALMOHADAS_ROPA_CAMA: Categoria = {
       nombre: "Almohada Luxury Mixta Plumas",
       descripcion: "Mezcla perfecta de fibra firme y plumas de ganso suaves, equilibrio perfecto",
       palabrasClave: ["almohada", "luxury", "plumas", "ganso", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/almohada-luxury-plumas.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ALMOHADAS_ROPA_CAMA",
       especificaciones: { tamaño: "Estándar, Queen, King", material: "Fibra + Plumas de ganso" }
     },
@@ -445,7 +445,7 @@ const ALMOHADAS_ROPA_CAMA: Categoria = {
       nombre: "Almohada Luxury Semi Firme",
       descripcion: "Fibra sensación de pluma con soporte medio, calidad hotelera profesional",
       palabrasClave: ["almohada", "luxury", "semi firme", "soporte medio", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/almohada-luxury-semifirme.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ALMOHADAS_ROPA_CAMA",
       especificaciones: { tamaño: "Estándar, Queen, King" }
     },
@@ -455,7 +455,7 @@ const ALMOHADAS_ROPA_CAMA: Categoria = {
       nombre: "Almohada Cool Enfriadora",
       descripcion: "Tela enfriadora que disipa calor y humedad, regula temperatura corporal",
       palabrasClave: ["almohada", "cool", "enfriadora", "fresca", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/almohada-cool.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ALMOHADAS_ROPA_CAMA",
       especificaciones: { tamaño: "Queen, King", material: "Tela cooling" }
     },
@@ -464,7 +464,7 @@ const ALMOHADAS_ROPA_CAMA: Categoria = {
       nombre: "Almohada Natural Memory Foam",
       descripcion: "Tecnología Memory Foam, resistente a ácaros, sensación extra suave",
       palabrasClave: ["almohada", "natural", "memory foam", "ácaros", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/almohada-memory-foam.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ALMOHADAS_ROPA_CAMA",
       especificaciones: { tamaño: "Queen, King", material: "Memory Foam" }
     },
@@ -473,7 +473,7 @@ const ALMOHADAS_ROPA_CAMA: Categoria = {
       nombre: "Almohada Full Body",
       descripcion: "Forma alargada para abrazar, apoyo a espalda, caderas y rodillas",
       palabrasClave: ["almohada", "full body", "embarazo", "apoyo", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/almohada-fullbody.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ALMOHADAS_ROPA_CAMA",
       especificaciones: { tamaño: "Alargada especial", material: "Fibra con funda 300 hilos" }
     },
@@ -482,7 +482,7 @@ const ALMOHADAS_ROPA_CAMA: Categoria = {
       nombre: "Almohada Ortopédica Cervical",
       descripcion: "Diseño ergonómico para descanso reparador, reduce tensión en cuello",
       palabrasClave: ["almohada", "ortopédica", "cervical", "ergonómica", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/almohada-ortopedica.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ALMOHADAS_ROPA_CAMA",
       especificaciones: { tamaño: "Estándar", material: "Memory Foam ergonómico" }
     },
@@ -492,7 +492,7 @@ const ALMOHADAS_ROPA_CAMA: Categoria = {
       nombre: "Almohada Clásica Fibra",
       descripcion: "Fibra siliconada con nivel óptimo de esponjosidad, apoyo semi firme",
       palabrasClave: ["almohada", "clásica", "fibra", "siliconada", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/almohada-clasica.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ALMOHADAS_ROPA_CAMA",
       especificaciones: { tamaño: "Estándar, Queen, King" }
     },
@@ -501,7 +501,7 @@ const ALMOHADAS_ROPA_CAMA: Categoria = {
       nombre: "Almohada Premium Fibra",
       descripcion: "Tela polycoton con soporte óptimo para cabeza y cuello",
       palabrasClave: ["almohada", "premium", "fibra", "polycoton", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/almohada-premium.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ALMOHADAS_ROPA_CAMA",
       especificaciones: { tamaño: "Estándar, Queen, King", material: "Polycoton" }
     },
@@ -511,7 +511,7 @@ const ALMOHADAS_ROPA_CAMA: Categoria = {
       nombre: "Almohada Euro Decorativa",
       descripcion: "Tamaño grande cuadrado ideal para decorar camas con toque elegante",
       palabrasClave: ["almohada", "euro", "decorativa", "cuadrada", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/almohada-euro.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ALMOHADAS_ROPA_CAMA",
       especificaciones: { tamaño: "66x66 cm" }
     },
@@ -520,7 +520,7 @@ const ALMOHADAS_ROPA_CAMA: Categoria = {
       nombre: "Relleno de Cojín Decorativo",
       descripcion: "Relleno de cojín con fibras suaves, funcional y duradero",
       palabrasClave: ["cojín", "relleno", "decorativo", "fibra", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/relleno-cojin.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ALMOHADAS_ROPA_CAMA",
       especificaciones: { tamaño: "45x45 cm" }
     },
@@ -530,7 +530,7 @@ const ALMOHADAS_ROPA_CAMA: Categoria = {
       nombre: "Protector de Colchón Acolchado",
       descripcion: "Capa de fibra para comodidad, tela microfibra suave, impermeable",
       palabrasClave: ["protector", "colchón", "acolchado", "impermeable", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/protector-acolchado.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ALMOHADAS_ROPA_CAMA",
       especificaciones: { tamaño: "Twin, Full, Queen, King" }
     },
@@ -539,7 +539,7 @@ const ALMOHADAS_ROPA_CAMA: Categoria = {
       nombre: "Protector de Colchón Deluxe",
       descripcion: "Tela microfibra suave, para cualquier tipo de colchón",
       palabrasClave: ["protector", "colchón", "deluxe", "impermeable", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/protector-deluxe.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ALMOHADAS_ROPA_CAMA",
       especificaciones: { tamaño: "Twin, Full, Queen, King" }
     },
@@ -548,7 +548,7 @@ const ALMOHADAS_ROPA_CAMA: Categoria = {
       nombre: "Protector de Almohada con Velcro",
       descripcion: "Protección impermeable con cierre de velcro, tela microfibra anti-ácaros",
       palabrasClave: ["protector", "almohada", "velcro", "impermeable", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/protector-almohada-velcro.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ALMOHADAS_ROPA_CAMA",
       especificaciones: { tamaño: "Estándar/Queen (51x74cm), King (51x94cm)" }
     },
@@ -557,7 +557,7 @@ const ALMOHADAS_ROPA_CAMA: Categoria = {
       nombre: "Protector de Almohada con Zipper",
       descripcion: "Protección impermeable con cierre escondido, descanso tranquilo",
       palabrasClave: ["protector", "almohada", "zipper", "impermeable", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/protector-almohada-zipper.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ALMOHADAS_ROPA_CAMA",
       especificaciones: { tamaño: "Estándar/Queen, King" }
     },
@@ -567,7 +567,7 @@ const ALMOHADAS_ROPA_CAMA: Categoria = {
       nombre: "Topper Hotelero 2 pulgadas",
       descripcion: "Topper de 2 pulgadas con 4 bandas de anclaje, costura acolchado elegante",
       palabrasClave: ["topper", "acolchado", "hotel", "confort", "suavidad"],
-      imagen: "/images/categorias/hoteleria/productos/topper-hotelero.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ALMOHADAS_ROPA_CAMA",
       especificaciones: { tamaño: "Twin, Full, Queen, King", dimensiones: "2 pulgadas" }
     },
@@ -577,7 +577,7 @@ const ALMOHADAS_ROPA_CAMA: Categoria = {
       nombre: "Duvet Edredón de Algodón",
       descripcion: "Edredón 100% algodón con costura capitonada, distribución uniforme",
       palabrasClave: ["duvet", "edredón", "algodón", "capitonado", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/duvet-algodón.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ALMOHADAS_ROPA_CAMA",
       especificaciones: { tamaño: "Full (208x229cm), Queen (229x229cm), King (267x229cm)" }
     },
@@ -586,7 +586,7 @@ const ALMOHADAS_ROPA_CAMA: Categoria = {
       nombre: "Duvet Edredón de Microfibra",
       descripcion: "Edredón de microfibra con relleno de fibra virgen siliconada, suave",
       palabrasClave: ["duvet", "edredón", "microfibra", "liviano", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/duvet-microfibra.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ALMOHADAS_ROPA_CAMA",
       especificaciones: { tamaño: "Twin (173x224cm), Full/Queen (224x224cm), King (270x224cm)" }
     },
@@ -596,7 +596,7 @@ const ALMOHADAS_ROPA_CAMA: Categoria = {
       nombre: "Sobrecama Capitoné Blanco",
       descripcion: "Diseño cocido capitoné elegante, tela microfibra con relleno durable",
       palabrasClave: ["sobrecama", "capitoné", "blanco", "elegante", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/sobrecama-blanco.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ALMOHADAS_ROPA_CAMA",
       especificaciones: { tamaño: "Twin/Full/Queen, King" }
     },
@@ -605,7 +605,7 @@ const ALMOHADAS_ROPA_CAMA: Categoria = {
       nombre: "Sobrecama Capitoné Azul",
       descripcion: "Diseño cocido capitoné en azul, tela microfibra con relleno durable",
       palabrasClave: ["sobrecama", "capitoné", "azul", "elegante", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/sobrecama-azul.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ALMOHADAS_ROPA_CAMA",
       especificaciones: { tamaño: "Twin/Full/Queen, King" }
     },
@@ -614,7 +614,7 @@ const ALMOHADAS_ROPA_CAMA: Categoria = {
       nombre: "Sobrecama Capitoné Camel",
       descripcion: "Diseño cocido capitoné en camel, tela microfibra con relleno durable",
       palabrasClave: ["sobrecama", "capitoné", "camel", "elegante", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/sobrecama-camel.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ALMOHADAS_ROPA_CAMA",
       especificaciones: { tamaño: "Twin/Full/Queen, King" }
     },
@@ -623,7 +623,7 @@ const ALMOHADAS_ROPA_CAMA: Categoria = {
       nombre: "Sobrecama Capitoné Gris",
       descripcion: "Diseño cocido capitoné en gris, tela microfibra con relleno durable",
       palabrasClave: ["sobrecama", "capitoné", "gris", "elegante", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/sobrecama-gris.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ALMOHADAS_ROPA_CAMA",
       especificaciones: { tamaño: "Twin/Full/Queen, King" }
     },
@@ -633,7 +633,7 @@ const ALMOHADAS_ROPA_CAMA: Categoria = {
       nombre: "Frazada Hotelera Blanco",
       descripcion: "Frazada con tejido aterciopelado suave, máximo confort y calidez",
       palabrasClave: ["frazada", "manta", "blanco", "aterciopelada", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/frazada-blanco.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ALMOHADAS_ROPA_CAMA",
       especificaciones: { tamaño: "Twin/Full/Queen, King" }
     },
@@ -642,7 +642,7 @@ const ALMOHADAS_ROPA_CAMA: Categoria = {
       nombre: "Frazada Hotelera Gris",
       descripcion: "Frazada con tejido aterciopelado suave en gris, calidez y elegancia",
       palabrasClave: ["frazada", "manta", "gris", "aterciopelada", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/frazada-gris.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ALMOHADAS_ROPA_CAMA",
       especificaciones: { tamaño: "Twin/Full/Queen, King" }
     },
@@ -651,7 +651,7 @@ const ALMOHADAS_ROPA_CAMA: Categoria = {
       nombre: "Frazada Hotelera Azul",
       descripcion: "Frazada con tejido aterciopelado suave en azul, calidez y elegancia",
       palabrasClave: ["frazada", "manta", "azul", "aterciopelada", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/frazada-azul.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ALMOHADAS_ROPA_CAMA",
       especificaciones: { tamaño: "Twin/Full/Queen, King" }
     },
@@ -660,7 +660,7 @@ const ALMOHADAS_ROPA_CAMA: Categoria = {
       nombre: "Frazada Hotelera Camel",
       descripcion: "Frazada con tejido aterciopelado suave en camel, calidez y elegancia",
       palabrasClave: ["frazada", "manta", "camel", "aterciopelada", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/frazada-camel.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ALMOHADAS_ROPA_CAMA",
       especificaciones: { tamaño: "Twin/Full/Queen, King" }
     }
@@ -675,7 +675,7 @@ const ACCESORIOS_VARIOS: Categoria = {
   id: "ACCESORIOS_VARIOS",
   nombre: "Accesorios y Complementos",
   descripcion: "Accesorios diversos y complementos para habitaciones de hotel, papelería y más",
-  imagen: "/images/categorias/hoteleria/Accesorios_y_Complementos.png",
+  imagen: "/images/categorias/hoteleria/accesorios-y-complementos.png",
   slug: "accesorios-complementos",
   productoCount: 11,
   colorPrimario: "amber",
@@ -686,7 +686,7 @@ const ACCESORIOS_VARIOS: Categoria = {
       nombre: "Bolsa de Lavandería Plástica",
       descripcion: "Bolsa de lavandería de plástico resistente para servicio hotelero",
       palabrasClave: ["bolsa", "lavandería", "hotel", "plástica"],
-      imagen: "/images/categorias/hoteleria/productos/bolsa-lavanderia-plastica.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ACCESORIOS_VARIOS",
       especificaciones: { material: "Plástico resistente" }
     },
@@ -695,7 +695,7 @@ const ACCESORIOS_VARIOS: Categoria = {
       nombre: "Bolsa de Lavandería Tela",
       descripcion: "Bolsa de lavandería de tela durable y reutilizable para hotel",
       palabrasClave: ["bolsa", "lavandería", "tela", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/bolsa-lavanderia-tela.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ACCESORIOS_VARIOS",
       especificaciones: { material: "Tela durable" }
     },
@@ -704,7 +704,7 @@ const ACCESORIOS_VARIOS: Categoria = {
       nombre: "Gancho Percha de Ropa",
       descripcion: "Gancho percha de plástico resistente para ropa en closets de hotel",
       palabrasClave: ["gancho", "percha", "ropa", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/gancho-percha-ropa.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ACCESORIOS_VARIOS",
       especificaciones: { material: "Plástico resistente" }
     },
@@ -713,7 +713,7 @@ const ACCESORIOS_VARIOS: Categoria = {
       nombre: "Gancho Percha de Madera",
       descripcion: "Gancho percha de madera premium con acabado elegante para hotel",
       palabrasClave: ["gancho", "percha", "madera", "hotel"],
-      imagen: "/images/categorias/hoteleria/productos/gancho-percha-madera.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ACCESORIOS_VARIOS",
       especificaciones: { material: "Madera premium" }
     },
@@ -722,7 +722,7 @@ const ACCESORIOS_VARIOS: Categoria = {
       nombre: "Posavasos Cartón Redondos",
       descripcion: "Posavasos de cartón redondos para bebidas en habitaciones de hotel",
       palabrasClave: ["posavasos", "cartón", "hotel", "redondos"],
-      imagen: "/images/categorias/hoteleria/productos/posavasos-carton.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ACCESORIOS_VARIOS",
       especificaciones: { material: "Cartón" }
     },
@@ -731,7 +731,7 @@ const ACCESORIOS_VARIOS: Categoria = {
       nombre: "Porta Vasos Plástico Desechable",
       descripcion: "Porta vasos de plástico desechable para vasos en habitaciones de hotel",
       palabrasClave: ["porta vasos", "plástico", "hotel", "desechable"],
-      imagen: "/images/categorias/hoteleria/productos/porta-vasos-plastico.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ACCESORIOS_VARIOS",
       especificaciones: { material: "Plástico desechable" }
     },
@@ -740,7 +740,7 @@ const ACCESORIOS_VARIOS: Categoria = {
       nombre: "Bolsas de Hielo Plásticas",
       descripcion: "Bolsas de hielo plásticas resistentes para servicio de hielo hotelero",
       palabrasClave: ["bolsas", "hielo", "hotel", "plásticas"],
-      imagen: "/images/categorias/hoteleria/productos/bolsas-hielo.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ACCESORIOS_VARIOS",
       especificaciones: { material: "Plástico resistente" }
     },
@@ -749,7 +749,7 @@ const ACCESORIOS_VARIOS: Categoria = {
       nombre: "Block de Notas con Membrete",
       descripcion: "Block de notas personalizado con membrete de hotel para escritorios",
       palabrasClave: ["block", "notas", "hotel", "membrete"],
-      imagen: "/images/categorias/hoteleria/productos/block-notas.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ACCESORIOS_VARIOS",
       especificaciones: { contenido: "Papelería personalizada" }
     },
@@ -758,7 +758,7 @@ const ACCESORIOS_VARIOS: Categoria = {
       nombre: "Sobres con Membrete Carta",
       descripcion: "Sobres tamaño carta con membrete personalizado de hotel",
       palabrasClave: ["sobres", "membrete", "hotel", "carta"],
-      imagen: "/images/categorias/hoteleria/productos/sobres-membrete.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ACCESORIOS_VARIOS",
       especificaciones: { tamaño: "Carta" }
     },
@@ -767,7 +767,7 @@ const ACCESORIOS_VARIOS: Categoria = {
       nombre: "Bolígrafos Logo Promocional",
       descripcion: "Bolígrafos con logo del hotel para promoción y uso de huéspedes",
       palabrasClave: ["bolígrafos", "logo", "hotel", "promocional"],
-      imagen: "/images/categorias/hoteleria/productos/boligrafos-logo.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ACCESORIOS_VARIOS",
       especificaciones: { contenido: "Bolígrafos personalizados" }
     },
@@ -776,7 +776,7 @@ const ACCESORIOS_VARIOS: Categoria = {
       nombre: "Lápices Logo Promocional",
       descripcion: "Lápices con logo del hotel para promoción y uso de huéspedes",
       palabrasClave: ["lápices", "logo", "hotel", "promocional"],
-      imagen: "/images/categorias/hoteleria/productos/lapices-logo.jpg",
+      imagen: "/images/categorias/hoteleria/categoria-placeholder.jpg",
       categoriaId: "ACCESORIOS_VARIOS",
       especificaciones: { contenido: "Lápices personalizados" }
     }
@@ -844,5 +844,7 @@ export function getProductosPorCategoria(categoriaId: string): Producto[] {
   const categoria = getCategoriaById(categoriaId);
   return categoria ? categoria.productos : [];
 }
+
+
 
 

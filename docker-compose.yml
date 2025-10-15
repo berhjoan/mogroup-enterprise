@@ -1,13 +1,61 @@
 version: '3.8'
 
 services:
-  mogroup-web:
+  # Base de datos PostgreSQL
+  postgres:
+    image: postgres:15-alpine
+    container_name: mogroup-postgres
+    environment:
+      POSTGRES_DB: mogroup_db
+      POSTGRES_USER: mogroup_user
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-mogroup_secure_pass_2025}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - mogroup-network
+    restart: unless-stopped
+
+  # Backend (Flask/FastAPI)
+  backend:
     build:
-      context: .
+      context: ./backend
       dockerfile: Dockerfile
+    container_name: mogroup-backend
+    environment:
+      DATABASE_URL: postgresql://mogroup_user:${DB_PASSWORD:-mogroup_secure_pass_2025}@postgres:5432/mogroup_db
+      FLASK_ENV: production
+      GEMINI_API_KEY: ${GEMINI_API_KEY}
+    depends_on:
+      - postgres
+    ports:
+      - "5000:5000"
+    networks:
+      - mogroup-network
+    restart: unless-stopped
+    volumes:
+      - ./backend:/app
+
+  # Frontend (Next.js)
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: mogroup-frontend
+    environment:
+      NEXT_PUBLIC_API_URL: http://backend:5000
+    depends_on:
+      - backend
     ports:
       - "3000:3000"
-    environment:
-      - NODE_ENV=production
+    networks:
+      - mogroup-network
     restart: unless-stopped
-    container_name: mogroup-web
+
+volumes:
+  postgres_data:
+
+networks:
+  mogroup-network:
+    driver: bridge
